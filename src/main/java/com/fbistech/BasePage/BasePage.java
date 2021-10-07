@@ -14,7 +14,8 @@ public class BasePage {
 	
 //	this is an AnddroidDriver object and is declare protected therefore BasePage can be use in sub-classe
 //	protected allows you to use BasePage in sub-classes 	
- 	 protected AndroidDriver driver; 
+//	Static was used due to error in TestUtil.java class
+ 	 protected static AndroidDriver driver; 
 	
 	
 	

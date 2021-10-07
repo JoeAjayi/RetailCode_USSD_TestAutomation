@@ -5,8 +5,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.fbistech.util.JiraPolicy;
-import com.fbistech.util.JiraServiceProvider;
+import com.fbistech.Utility.JiraPolicy;
+import com.fbistech.Utility.JiraServiceProvider;
 
 public class TestJiraListener implements ITestListener {
 	
