@@ -32,7 +32,6 @@ public class CheckBalance extends BasePage {
 	
 	
 //	public void userCheckBalance(String checkBalance) throws InterruptedException
-
 	public String dealerCheckWalletBalance() throws InterruptedException
 	{
 //		textField.sendKeys(checkBalance);
