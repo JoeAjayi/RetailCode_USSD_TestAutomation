@@ -1,0 +1,31 @@
+<?xml version-"1.0" encoding-"UTF-8"?>
+<!DOCTYPE suite SYSTEM	"http://testng.org/testng-1.0.dtd">
+<suite name-"RetailCode_USSD_TestAutomation">
+	<test name-"RetailCode Test Cases">
+		<classes>	
+		    <class name- "com.fbistech.Customer_TestCase.AirtimeRequest_TestCase"></class>
+			
+			<class name- "com.fbistech.Dealer_TestCase.CheckBalacne_TestCase"></class>
+			<class name- "com.fbistech.Dealer_TestCase.DirectDealerFunding_TestCase"></class>
+			<class name- "com.fbistech.Dealer_TestCase.FundRequest_TestCase"></class>
+			<class name- "com.fbistech.Dealer_TestCase.VendAirtime_TestCase"></class>
+			
+			<class name- "com.fbistech.Retailer_TestCases.AirtimeRequest_TestCase"></class>
+			<class name- "com.fbistech.Retailer_TestCases.CheckWalletBalance_TestCase"></class>		
+			<class name- "com.fbistech.Retailer_TestCases.DirectFunding_TestCase"></class>
+			<class name- "com.fbistech.Retailer_TestCases.Onboarding_TestCases"></class>
+			<class name- "com.fbistech.Retailer_TestCases.VendAirtime_Retailer_TestCase"></class>
+			
+
+			<class name- "com.fbistech.SubDealer_TestCase.ApproveAirtimeRequest_TestCase"></class>
+			<class name- "com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase"></class>
+			<class name- "com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase"></class>
+			<class name- "com.fbistech.SubDealer_TestCase.FundRequest_TestCase"></class>
+			<class name- "com.fbistech.SubDealer_TestCase.Onboarding_TestCases"></class>
+			<class name- "com.fbistech.SubDealer_TestCase.VendAirtime_TestCase"></class>
+			
+
+		</classes>
+	</test>
+</suite>
+
