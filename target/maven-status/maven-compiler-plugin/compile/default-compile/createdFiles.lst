@@ -55,6 +55,7 @@ com/fbistech/Retailer/VendAirtime_RetailerToRetailer.class
 com/fbistech/SubDealer/VendAirtime_SubDealerToDealer_NotUpline.class
 com/fbistech/Retailer/DirectFunding_RetailerToDealer_Upline.class
 com/fbistech/Utility/JiraServiceProvider.class
+com/fbistech/ExtentReportListener/TestJiraListener.class
 com/fbistech/Retailer/VendAirtime_RetailerToDealer_NotUpline.class
 com/fbistech/Utility/MobileSMSUtility.class
 com/fbistech/Retailer/Onboarding_RetailerUnder_Dealer.class

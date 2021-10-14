@@ -52,6 +52,7 @@
 /Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/Retailer/DirectFunding_RetailerToDealer_NotUpLine.java
 /Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/Customer/AirtimeRequest_CustomerFrom_Dealer.java
 /Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/SubDealer/VendAirtime_SubDealerToSubDealer_SameUpline.java
+/Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/ExtentReportListener/TestJiraListener.java
 /Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/SubDealer/FundRequest_SubDelerToDealer.java
 /Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/SubDealer/VendAirtime_SubDealerToDealer_Upline.java
 /Users/fbistech-qa/eclipse-workspace/RetailCode_USSD_TestAutomation/src/main/java/com/fbistech/Customer/AirtimeRequest_CustomerFrom_RetailerUnderSubdealer.java
