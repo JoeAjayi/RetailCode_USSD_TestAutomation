@@ -31,5 +31,7 @@
 	<classpathentry kind="lib" path="/Users/fbistech-qa/Desktop/Selenium Drivers/web-Drivers-2020/selenium-java-3.141.59-2020/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="/Users/fbistech-qa/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar"/>
 	<classpathentry kind="lib" path="/Users/fbistech-qa/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/fbistech-qa/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/fbistech-qa/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

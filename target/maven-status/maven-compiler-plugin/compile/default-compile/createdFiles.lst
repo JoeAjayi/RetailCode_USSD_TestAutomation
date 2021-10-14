@@ -27,6 +27,7 @@ com/fbistech/SubDealer/DirectFunding_SubDealerToSubDealer_NotOnSameDealer.class
 com/fbistech/SubDealer/Onboarding_SubDealerUnder_Dealer.class
 com/fbistech/SubDealer/DirectFunding_SubDealerToDealer_Upline.class
 com/fbistech/Customer/CustomerLoadRechargeLater_self.class
+com/fbistech/ExtentReportListener/ExtentReportListener.class
 com/fbistech/Dealer/VendAirtime_DealerToSubDealer_NotOnDownLine.class
 com/fbistech/Dealer/DirectFunding_DealerToRetailer_OnDownline.class
 com/fbistech/Retailer/VendAirtime_RetailerToDealer_Upline.class
