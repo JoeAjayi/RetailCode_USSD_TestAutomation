@@ -19,7 +19,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 //this is a standard template provided by Extent Report Listener
 
-public class ExtentReportListener implements IReporter {
+public class ExtentReporterNG implements IReporter {
 	
 	
 	private ExtentReports extent; 
@@ -27,7 +27,7 @@ public class ExtentReportListener implements IReporter {
 	
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,  String outputDirectory) 
 	{  
-		extent = new ExtentReports(outputDirectory + File.separator + "Extent.html", true);
+		extent = new ExtentReports(outputDirectory + File.separator + "Fbis_Extent.html", true);
  
 		for (ISuite suite : suites) 
 		{

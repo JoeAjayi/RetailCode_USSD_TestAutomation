@@ -38,7 +38,7 @@ public class CheckWalletBalance extends BasePage {
 	{
 		
 //		textField.sendKeys(checkBalance);
-		textField.sendKeys("*878*878*8#");
+		textField.sendKeys("*878*8#");
 		callButon.click();
 		Thread.sleep(5000);
 		
