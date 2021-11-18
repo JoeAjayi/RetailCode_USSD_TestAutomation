@@ -43,7 +43,7 @@ public class DirectFunding_SubDealerToCustomer extends BasePage {
 	{
 		
 //		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*878*33*09135212172*1#");
+		textField.sendKeys("*878*33*09135212172*1#");
 		callButton.click(); 
 		Thread.sleep(5000);
 		

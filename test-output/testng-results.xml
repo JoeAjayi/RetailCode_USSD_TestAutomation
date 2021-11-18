@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14959" started-at="2021-08-05T18:54:26 WAT" finished-at="2021-08-05T18:54:41 WAT">
+  <suite name="Default suite" duration-ms="15026" started-at="2021-11-17T23:32:25 WAT" finished-at="2021-11-17T23:32:40 WAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14959" started-at="2021-08-05T18:54:26 WAT" finished-at="2021-08-05T18:54:41 WAT">
-      <class name="com.fbistech.SubDealer_TestCase.FundRequest_TestCase">
-        <test-method status="PASS" signature="verifySubDealerCanRequestFund()[pri:1, instance:com.fbistech.SubDealer_TestCase.FundRequest_TestCase@782859e]" name="verifySubDealerCanRequestFund" duration-ms="14916" started-at="2021-08-05T18:54:26 WAT" finished-at="2021-08-05T18:54:41 WAT">
+    <test name="Default test" duration-ms="15026" started-at="2021-11-17T23:32:25 WAT" finished-at="2021-11-17T23:32:40 WAT">
+      <class name="com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase">
+        <test-method status="PASS" signature="verifySubDealerCanCheckWalletBalance()[pri:0, instance:com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase@2657d4dd]" name="verifySubDealerCanCheckWalletBalance" duration-ms="14938" started-at="2021-11-17T23:32:25 WAT" finished-at="2021-11-17T23:32:40 WAT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySubDealerCanRequestFund -->
-      </class> <!-- com.fbistech.SubDealer_TestCase.FundRequest_TestCase -->
+        </test-method> <!-- verifySubDealerCanCheckWalletBalance -->
+      </class> <!-- com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

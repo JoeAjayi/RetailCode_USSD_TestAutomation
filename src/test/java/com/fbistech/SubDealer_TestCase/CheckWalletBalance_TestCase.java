@@ -1,24 +1,16 @@
 package com.fbistech.SubDealer_TestCase;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.fbistech.BasePage.BasePage;
 import com.fbistech.SubDealer.CheckWalletBalance;
 import com.fbistech.Utility.LaunchMobileUtility;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class CheckWalletBalance_TestCase extends BasePage{
+public class CheckWalletBalance_TestCase {
 	
 	
-	
-public CheckWalletBalance_TestCase(AndroidDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
-
-
-
 
 
 //	public CheckBalance_TestCase(AndroidDriver driver) {
@@ -41,6 +33,7 @@ public CheckWalletBalance_TestCase(AndroidDriver driver) {
 		CheckWalletBalance checkBalance = new CheckWalletBalance(driver);
 
 		String getWalletBalanceText = checkBalance.subdealerCheckWalletBalance();
+//		Assert.assertNull(getWalletBalanceText);
 		System.out.println(getWalletBalanceText);
 		
 //		checkBalance.userCheckBalance(prop.getProperty("checkBalance"));

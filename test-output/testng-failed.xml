@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fbistech.SubDealer_TestCase.DirectFunding_TestCase">
+      <class name="com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase">
         <methods>
-          <include name="verifySubDealerCanFund_SubDealerOnSameDealer"/>
-          <include name="verifySubDealerCanFund_RetailerOnDownLine"/>
-          <include name="verifySubDealerCannotFundSubDealer_NotOnSameDealer"/>
+          <include name="verifySubDealerCanCheckWalletBalance"/>
         </methods>
-      </class> <!-- com.fbistech.SubDealer_TestCase.DirectFunding_TestCase -->
+      </class> <!-- com.fbistech.SubDealer_TestCase.CheckWalletBalance_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
