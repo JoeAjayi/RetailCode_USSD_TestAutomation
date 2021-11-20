@@ -17,13 +17,13 @@ public class Onboarding_TestCases {
 	
 	
 //	@Test(priority = 2) 
-	public void verifySubDealerCanOnboardDirectlyUnderDealer()throws Exception
-	{
-		OnboardingDirectly_SubDealerUnder_FBIS_Dealer direct_SubDealerOnboardUnder_Dealer = new OnboardingDirectly_SubDealerUnder_FBIS_Dealer(driver);
-		String registrationDetails = direct_SubDealerOnboardUnder_Dealer.validateSubdealerOnboardDirectlyUnderFBISDealer();
-		System.out.println(registrationDetails);
-		Thread.sleep(19000);
-	}
+//	public void verifySubDealerCanOnboardDirectlyUnderDealer()throws Exception
+//	{
+//		OnboardingDirectly_SubDealerUnder_FBIS_Dealer direct_SubDealerOnboardUnder_Dealer = new OnboardingDirectly_SubDealerUnder_FBIS_Dealer(driver);
+//		String registrationDetails = direct_SubDealerOnboardUnder_Dealer.validateSubdealerOnboardDirectlyUnderFBISDealer();
+//		System.out.println(registrationDetails);
+//		Thread.sleep(19000);
+//	}
 	
 	
 	

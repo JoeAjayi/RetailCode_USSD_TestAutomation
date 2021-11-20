@@ -55,24 +55,28 @@ public class Onboarding_SubDealerUnder_Dealer extends BasePage {
 	public String validateSubdealerOnboardUnderDealer() throws Exception
 	{	
 //		Dial Short code 
-		digits_InputField.sendKeys("*878*878*22*1*00#");
+		digits_InputField.sendKeys("*878*22*1*00#");
 		dial_Button.click();
 		Thread.sleep(3000);
+		
 		
 //		Enter Retailer's name 
 		text_InputField.sendKeys("Joseph Sub-dealer");
 		sendText_Button.click();
 		Thread.sleep(3000);
 		
+		
 //		Enter Sub-Region 
 		text_InputField.sendKeys("Lagos");
 		sendText_Button.click();
 		Thread.sleep(4000);
 		
+		
 //		Enter more than 4 digits to create PIN
 		text_InputField.sendKeys("1234567");
 		sendText_Button.click();
 		Thread.sleep(4000);
+		
 		
 //		Enter 4 digits PIN
 		text_InputField.sendKeys("1234");
@@ -84,6 +88,7 @@ public class Onboarding_SubDealerUnder_Dealer extends BasePage {
 		text_InputField.sendKeys("123567PIN");
 		sendText_Button.click();
 		Thread.sleep(4000);
+		
 		
 //		Enter 4 digits PIN to confirm PIN
 		text_InputField.sendKeys("1234");
@@ -99,9 +104,10 @@ public class Onboarding_SubDealerUnder_Dealer extends BasePage {
 		Thread.sleep(6000);
 //		ok_Button.click();
 		
+		
 //		balanceOK_Btn.click();
 //		Thread.sleep(10000);
-//		smsCancel_Btn.click();
+//		smsCancel_Btn.click(); 
 		
 		return onboardingDetails;
 

@@ -1,6 +1,5 @@
 package com.fbistech.SubDealer_TestCase;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.fbistech.SubDealer.CheckWalletBalance;
@@ -26,7 +25,8 @@ public class CheckWalletBalance_TestCase {
 	
 	
 
-	@Test
+	@com.fbistech.Utility.JiraPolicy(logTicketReady = true)
+	@Test(priority = 1)
 	public void verifySubDealerCanCheckWalletBalance() throws Exception
 	{
 		
