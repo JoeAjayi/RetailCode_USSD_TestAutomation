@@ -19,7 +19,7 @@ public class CheckWalletBalance_TestCase {
 
 
 
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AndroidDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 	

@@ -19,7 +19,7 @@ public class LaunchMobileUtility {
 
 	
 	
-	public static AndroidDriver getAndroidDriver()
+	public static AndroidDriver initializeMobileAndroidDriver()
 	{
 		AppiumDriver driver = null;
 		
