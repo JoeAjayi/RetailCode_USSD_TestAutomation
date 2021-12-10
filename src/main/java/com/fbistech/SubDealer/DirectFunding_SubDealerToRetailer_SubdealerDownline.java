@@ -2,17 +2,31 @@ package com.fbistech.SubDealer;
 
 import com.fbistech.BasePage.BasePage;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class DirectFunding_SubDealerToRetailer_OnDownline extends BasePage {
+public class DirectFunding_SubDealerToRetailer_SubdealerDownline extends BasePage {
 
+	
 //	Initialize the Page Objects
-	public DirectFunding_SubDealerToRetailer_OnDownline(AndroidDriver driver)
+	public DirectFunding_SubDealerToRetailer_SubdealerDownline(AppiumDriver driver)
 	{
 		super(driver);
 	}
+	
+	
+	
+	
+	
+//	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Asterisk\"]/android.widget.TextView") 
+//	private AndroidElement starBtn;
+//	
+//	@AndroidFindBy(xpath = "//*[@resource-id='com.samsung.android.contacts:id/digits']") 
+//	private AndroidElement textField;	
+//	
+//	@AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc=\"Call button\"]")
+//	private AndroidElement callButton;
 	
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
@@ -22,7 +36,8 @@ public class DirectFunding_SubDealerToRetailer_OnDownline extends BasePage {
 	private AndroidElement callButton;
 	
 	
-	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
+	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']") 
+//	@AndroidFindBy(xpath = "//*[@resource-id='com.android.phone:id/input_field']")
 	private AndroidElement pinInPutField;
 	
 	@AndroidFindBy(xpath = "//*[@text='SEND']")
@@ -45,14 +60,16 @@ public class DirectFunding_SubDealerToRetailer_OnDownline extends BasePage {
 	
 
 	
-	public String validatesubdealerFundRetailer_OnDownline() throws Exception
+	public String validateSubdealerFundRetailer_SubDealerDownline() throws Exception
 	{
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*878*33*005394*1#");
-		callButton.click();
-		Thread.sleep(4000);
 		
-		pinInPutField.sendKeys("1234");
+//		starBtn.click();
+//		textField.sendKeys(subDealerToRetailerDownline);
+		textField.sendKeys("*878*999*33*002360*3#");
+		callButton.click();
+		Thread.sleep(7000);
+		
+		pinInPutField.sendKeys("*999*1234");
 		sendPinButton.click();
 		Thread.sleep(5000);
 		

@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 import com.fbistech.SubDealer.CheckWalletBalance;
 import com.fbistech.Utility.LaunchMobileUtility;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 
 public class CheckWalletBalance_TestCase {
-	
+	 
 	
 
 
@@ -19,9 +19,9 @@ public class CheckWalletBalance_TestCase {
 
 
 
-	AndroidDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
-	
+//	AppiumDriver driver = LaunchSamsungMobileUtilit.initializeMobileAndroidDriver();
 	
 	
 

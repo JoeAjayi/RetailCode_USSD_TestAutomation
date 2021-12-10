@@ -2,6 +2,7 @@ package com.fbistech.SubDealer;
 
 import com.fbistech.BasePage.BasePage;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,7 +10,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class DirectFunding_SubDealerToSubDealer_OnSameDealer extends BasePage{
 
 	
-	public DirectFunding_SubDealerToSubDealer_OnSameDealer(AndroidDriver driver)
+	public DirectFunding_SubDealerToSubDealer_OnSameDealer(AppiumDriver driver)
 	{
 		super(driver);
 //		PageFactory.initElements(driver, this);

@@ -2,6 +2,7 @@ package com.fbistech.SubDealer;
 
 import com.fbistech.BasePage.BasePage;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,12 +10,14 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class DirectFunding_SubDealerToCustomer extends BasePage {
 
 	
-	public DirectFunding_SubDealerToCustomer (AndroidDriver driver)
+	public DirectFunding_SubDealerToCustomer (AppiumDriver driver)
 	{
 		super(driver);
 	}
 	
 	
+	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Asterisk\"]/android.widget.TextView") 
+	private AndroidElement starBtn;
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
 	private AndroidElement textField;	
@@ -23,11 +26,11 @@ public class DirectFunding_SubDealerToCustomer extends BasePage {
 	private AndroidElement callButton;
 	
 	
-//	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
-//	private AndroidElement pinInPutField;
-//	
-//	@AndroidFindBy(xpath = "//*[@text='SEND']")
-//	private AndroidElement sendPIN_Btn;
+	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
+	private AndroidElement pinInPutField;
+	
+	@AndroidFindBy(xpath = "//*[@text='SEND']")
+	private AndroidElement sendPIN_Btn;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Btn;
@@ -43,13 +46,14 @@ public class DirectFunding_SubDealerToCustomer extends BasePage {
 	{
 		
 //		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*33*09135212172*1#");
+		starBtn.click();
+		textField.sendKeys("*878*999*33*09135212172*1#");
 		callButton.click(); 
 		Thread.sleep(5000);
 		
-//		pinInPutField.sendKeys("1234");
-//		sendPIN_Btn.click();
-//		Thread.sleep(4000);
+		pinInPutField.sendKeys("*999*1234");
+		sendPIN_Btn.click();
+		Thread.sleep(4000);
 		
 		String balance = accountBalancePopUp.getText();
 		Thread.sleep(5000);

@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -15,7 +16,7 @@ public class BasePage {
 //	this is an AnddroidDriver object and is declare protected therefore BasePage can be use in sub-classe
 //	protected allows you to use BasePage in sub-classes 	
 //	Static was used due to error in TestUtil.java class
- 	 protected static AndroidDriver driver; 
+ 	 protected static AppiumDriver driver; 
 	
 	
 	
@@ -27,7 +28,7 @@ public class BasePage {
 //	this constructor is accepting AndroidDriver as an object , it takes the driver object and assign it to 
 //	AndroidDriver driver object
 	
-	public BasePage(AndroidDriver driver) 
+	public BasePage(AppiumDriver driver) 
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);

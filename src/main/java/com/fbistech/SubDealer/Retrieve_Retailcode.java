@@ -3,13 +3,12 @@ package com.fbistech.SubDealer;
 import com.fbistech.BasePage.BasePage;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class CheckWalletBalance extends BasePage {
+public class Retrieve_Retailcode extends BasePage {
 	
-	public CheckWalletBalance(AppiumDriver driver)
+	public Retrieve_Retailcode (AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -28,33 +27,30 @@ public class CheckWalletBalance extends BasePage {
 
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
-	private AndroidElement textField;	
+	private AndroidElement digits_InputField;	
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement callButon;
 
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement walletBalance_Popup;
+	private AndroidElement responseField_Popup;
 	
 	
-	
-	@AndroidFindBy(xpath = "//*[@class='android.widget.Button']") //*[@text='OK']
+	@AndroidFindBy(xpath = "//*[@text='OK']") 
 	private AndroidElement ok_Btn;
 	
 	
 //	public void userCheckBalance(String checkBalance) throws InterruptedException
 
-	public String subdealerCheckWalletBalance() throws InterruptedException
+	public String validateSubdealerRetrieve_Retailcode() throws InterruptedException
 	{
-		
 //		starBtn.click();
-		textField.sendKeys("*878*999*8#");
+		digits_InputField.sendKeys("*878*999*10#");
 		callButon.click();
 		Thread.sleep(6000);
 		
-		String balance = walletBalance_Popup.getText();
+		String balance = responseField_Popup.getText();
 		Thread.sleep(6000);
 		
 		ok_Btn.click();
