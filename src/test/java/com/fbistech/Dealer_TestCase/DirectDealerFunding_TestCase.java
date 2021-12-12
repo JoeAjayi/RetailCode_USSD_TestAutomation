@@ -13,13 +13,14 @@ import com.fbistech.Dealer.FundRequest_Dealer;
 import com.fbistech.Dealer.VendAirtime_DealerToRetailer_NotOnDownLine;
 import com.fbistech.Utility.LaunchMobileUtility;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class DirectDealerFunding_TestCase {
 	
 	
 
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 //	DealerFundSubDealer_DealerDownline dealerFundSubDealer_DealerDownline;
 	

@@ -10,6 +10,7 @@ import com.fbistech.Retailer.DirectFunding_RetailerToSubDealer_NotUpline;
 import com.fbistech.Retailer.DirectFunding_RetailerToSubDealer_Upline;
 import com.fbistech.Utility.LaunchMobileUtility;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class DirectFunding_TestCase {
@@ -24,7 +25,7 @@ public class DirectFunding_TestCase {
 //
 //	}
 
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 

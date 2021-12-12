@@ -8,12 +8,13 @@ import com.fbistech.Customer.AirtimeRequest_CustomerFrom_RetailerUnderSubdealer;
 import com.fbistech.Customer.AirtimeRequest_CustomerFrom_Subdealer;
 import com.fbistech.Utility.LaunchMobileUtility;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class AirtimeRequest_TestCase {
 
 	
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 	

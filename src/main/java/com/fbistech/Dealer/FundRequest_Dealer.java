@@ -2,14 +2,14 @@ package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class FundRequest_Dealer extends BasePage {
 
 	
-	public FundRequest_Dealer(AndroidDriver driver)
+	public FundRequest_Dealer(AppiumDriver driver)
 	{
 		super(driver);
 	}

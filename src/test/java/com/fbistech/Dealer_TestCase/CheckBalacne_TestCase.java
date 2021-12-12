@@ -6,6 +6,7 @@ import com.fbistech.BasePage.BasePage;
 import com.fbistech.Dealer.CheckBalance;
 import com.fbistech.Utility.LaunchMobileUtility;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class CheckBalacne_TestCase {
@@ -17,7 +18,7 @@ public class CheckBalacne_TestCase {
 
  
 
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 	

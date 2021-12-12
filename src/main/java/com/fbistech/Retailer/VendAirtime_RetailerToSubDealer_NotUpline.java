@@ -2,13 +2,14 @@ package com.fbistech.Retailer;
 
 import com.fbistech.BasePage.BasePage;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class VendAirtime_RetailerToSubDealer_NotUpline extends BasePage {
 	
-	public VendAirtime_RetailerToSubDealer_NotUpline(AndroidDriver driver)
+	public VendAirtime_RetailerToSubDealer_NotUpline(AppiumDriver driver)
 	{
 		super(driver);
 	}

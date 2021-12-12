@@ -2,6 +2,7 @@ package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,7 +10,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 public class DirectFunding_DealerToDealer extends BasePage {
 
 	
-	public DirectFunding_DealerToDealer(AndroidDriver driver)
+	public DirectFunding_DealerToDealer(AppiumDriver driver)
 	{
 		super(driver);
 	}

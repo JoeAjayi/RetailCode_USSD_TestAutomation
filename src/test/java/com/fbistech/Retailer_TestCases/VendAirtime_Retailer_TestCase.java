@@ -10,12 +10,13 @@ import com.fbistech.Retailer.VendAirtime_RetailerToSubDealer_NotUpline;
 import com.fbistech.Retailer.VendAirtime_RetailerToSubDealer_Upline;
 import com.fbistech.Utility.LaunchMobileUtility;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class VendAirtime_Retailer_TestCase {
 	 
 	
-AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 	

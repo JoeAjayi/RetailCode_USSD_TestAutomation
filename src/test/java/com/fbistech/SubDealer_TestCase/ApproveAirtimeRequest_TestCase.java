@@ -2,14 +2,14 @@ package com.fbistech.SubDealer_TestCase;
 
 import org.testng.annotations.Test;
 
-import com.fbistech.Utility.MobileSMSUtility;
+import com.fbistech.Utility.LaunchMobileUtility;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 
 public class ApproveAirtimeRequest_TestCase {
 	
 	
-AndroidDriver driver = MobileSMSUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 

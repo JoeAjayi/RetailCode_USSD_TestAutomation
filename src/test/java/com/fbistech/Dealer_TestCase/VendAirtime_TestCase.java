@@ -8,13 +8,13 @@ import com.fbistech.Dealer.VendAirtime_DealerToRetailer_OnDownLine;
 import com.fbistech.Dealer.VendAirtime_DealerToSubDealer_NotOnDownLine;
 import com.fbistech.Utility.LaunchMobileUtility;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 
 public class VendAirtime_TestCase {
 	
 	
 	
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 

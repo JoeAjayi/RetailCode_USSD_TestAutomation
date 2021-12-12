@@ -2,13 +2,14 @@ package com.fbistech.Customer;
 
 import com.fbistech.BasePage.BasePage;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class AirtimeRequest_CustomerFrom_Dealer extends BasePage {
 	
-	public AirtimeRequest_CustomerFrom_Dealer(AndroidDriver driver)
+	public AirtimeRequest_CustomerFrom_Dealer(AppiumDriver driver)
 	{
 		super(driver);
 	}
