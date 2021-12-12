@@ -1,4 +1,4 @@
-package com.fbistech.Customer;
+package com.fbistech.Retailer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -6,11 +6,11 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class CustomerRequestRechargeLater extends BasePage {
+public class Transaction_HistoryRetailer extends BasePage {
 
 	
 //	Initialize the Page Objects
-	public CustomerRequestRechargeLater (AppiumDriver driver)
+	public Transaction_HistoryRetailer (AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -51,14 +51,18 @@ public class CustomerRequestRechargeLater extends BasePage {
 	
 
 	
-	public String validateSubdealerCanView_TransactionHistory() throws Exception
+	public String validateRetailerCanView_TransactionHistory() throws Exception
 	{
 		
 //		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*999*2*00263*100#");
+		textField.sendKeys("*878*999*11#");
 		callButton.click();
 		Thread.sleep(8000);
-	
+		
+//		pinInPutField.sendKeys("*999*1234");
+//		sendPinButton.click();
+//		Thread.sleep(5000);
+		
 		String balance = accountBalanceResponse.getText();
 		Thread.sleep(8000);
 		

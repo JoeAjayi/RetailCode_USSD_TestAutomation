@@ -1,4 +1,4 @@
-package com.fbistech.Customer;
+package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -6,11 +6,11 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class CustomerRequestRechargeLater extends BasePage {
+public class Transaction_HistoryDealer extends BasePage {
 
 	
 //	Initialize the Page Objects
-	public CustomerRequestRechargeLater (AppiumDriver driver)
+	public Transaction_HistoryDealer (AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -36,7 +36,7 @@ public class CustomerRequestRechargeLater extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalanceResponse;
+	private AndroidElement accountBalancePopUp;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
@@ -51,15 +51,16 @@ public class CustomerRequestRechargeLater extends BasePage {
 	
 
 	
-	public String validateSubdealerCanView_TransactionHistory() throws Exception
+	public String validateDealerCanView_TransactionHistory() throws Exception
 	{
 		
 //		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*999*2*00263*100#");
+		textField.sendKeys("*878*999*11#");
 		callButton.click();
 		Thread.sleep(8000);
-	
-		String balance = accountBalanceResponse.getText();
+		
+		
+		String balance = accountBalancePopUp.getText();
 		Thread.sleep(8000);
 		
 		ok_Button.click();

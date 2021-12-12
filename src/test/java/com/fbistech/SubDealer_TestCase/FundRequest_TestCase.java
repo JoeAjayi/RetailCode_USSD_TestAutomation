@@ -5,13 +5,13 @@ import org.testng.annotations.Test;
 import com.fbistech.SubDealer.FundRequest_SubDelerToDealer;
 import com.fbistech.Utility.LaunchMobileUtility;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 
 public class FundRequest_TestCase {
 	
 	
 
-	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
+	 AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 
 	
 

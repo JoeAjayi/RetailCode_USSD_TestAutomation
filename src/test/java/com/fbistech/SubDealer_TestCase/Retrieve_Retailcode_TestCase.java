@@ -20,9 +20,9 @@ public class Retrieve_Retailcode_TestCase {
 		
 		Retrieve_Retailcode retrieveRetailcode = new Retrieve_Retailcode(driver);
 
-		String getRetrieveRetailcode = retrieveRetailcode.validateSubdealerRetrieve_Retailcode();
+		String retrieveSubdealerRetailcode = retrieveRetailcode.validateSubdealerRetrieve_Retailcode();
 //		Assert.assertNull(getWalletBalanceText);
-		System.out.println(getRetrieveRetailcode);
+		System.out.println(retrieveSubdealerRetailcode);
 		
 //		checkBalance.userCheckBalance(prop.getProperty("checkBalance"));
 	}	

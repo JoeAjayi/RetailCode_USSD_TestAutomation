@@ -67,7 +67,7 @@ public class DirectFunding_SubDealerToRetailer_SubdealerDownline extends BasePag
 //		textField.sendKeys(subDealerToRetailerDownline);
 		textField.sendKeys("*878*999*33*002360*3#");
 		callButton.click();
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		
 		pinInPutField.sendKeys("*999*1234");
 		sendPinButton.click();

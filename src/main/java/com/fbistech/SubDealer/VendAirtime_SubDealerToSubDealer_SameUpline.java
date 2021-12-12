@@ -2,13 +2,13 @@ package com.fbistech.SubDealer;
 
 import com.fbistech.BasePage.BasePage;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class VendAirtime_SubDealerToSubDealer_SameUpline extends BasePage {
 	
-	public VendAirtime_SubDealerToSubDealer_SameUpline(AndroidDriver driver)
+	public VendAirtime_SubDealerToSubDealer_SameUpline(AppiumDriver driver)
 	{
 		super(driver);
 	}

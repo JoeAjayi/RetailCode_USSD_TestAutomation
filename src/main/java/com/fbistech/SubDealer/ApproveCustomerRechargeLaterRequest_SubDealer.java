@@ -1,4 +1,4 @@
-package com.fbistech.Customer;
+package com.fbistech.SubDealer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -6,22 +6,19 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class CustomerRequestRechargeLater extends BasePage {
-
+public class ApproveCustomerRechargeLaterRequest_SubDealer extends BasePage {
 	
 //	Initialize the Page Objects
-	public CustomerRequestRechargeLater (AppiumDriver driver)
+	public ApproveCustomerRechargeLaterRequest_SubDealer (AppiumDriver driver)
 	{
 		super(driver);
 	}
 	
 	
-	
 
 	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
-	private AndroidElement textField;	
+	private AndroidElement textInputField;	
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement callButton;
@@ -51,20 +48,30 @@ public class CustomerRequestRechargeLater extends BasePage {
 	
 
 	
-	public String validateSubdealerCanView_TransactionHistory() throws Exception
+	public String validateSubdealerApproveCustomerRechargeLaterRequest() throws Exception
 	{
 		
 //		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*999*2*00263*100#");
+		textInputField.sendKeys("*878*999*3*84#");
 		callButton.click();
 		Thread.sleep(8000);
-	
+		
+////		Amount to Recall
+//		pinInPutField.sendKeys("*999*3");
+//		sendPinButton.click();
+//		Thread.sleep(5000);
+		
+//		Enter PIN to complete Fund Recall
+		pinInPutField.sendKeys("*999*1234");
+		sendPinButton.click();
+		Thread.sleep(7000);
+		
 		String balance = accountBalanceResponse.getText();
-		Thread.sleep(8000);
+		Thread.sleep(7000);
 		
 		ok_Button.click();
 
 		return balance;
 	}
-	
+
 }

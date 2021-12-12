@@ -5,11 +5,13 @@ import org.testng.annotations.Test;
 import com.fbistech.SubDealer.Onboarding_SubDealerUnder_Dealer;
 import com.fbistech.Utility.LaunchMobileUtility;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Onboarding_TestCases {
 	
-	AndroidDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
+	
+	 AppiumDriver driver = LaunchMobileUtility.initializeMobileAndroidDriver();
 	
 	
 //	AppiumDriver driver = LaunchSamsungMobileUtilit.initializeMobileAndroidDriver();
