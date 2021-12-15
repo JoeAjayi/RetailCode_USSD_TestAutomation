@@ -7,9 +7,9 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class CheckWalletBalance extends BasePage {
+public class CheckSubDealerWalletBalance extends BasePage {
 	
-	public CheckWalletBalance(AppiumDriver driver)
+	public CheckSubDealerWalletBalance(AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -36,7 +36,7 @@ public class CheckWalletBalance extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement walletBalance_Popup;
+	private AndroidElement walletBalanceResponse;
 	
 	
 	
@@ -44,17 +44,21 @@ public class CheckWalletBalance extends BasePage {
 	private AndroidElement ok_Btn;
 	
 	
+	
+//	Abstraction method
 //	public void userCheckBalance(String checkBalance) throws InterruptedException
 
-	public String subdealerCheckWalletBalance() throws InterruptedException
+//	public String subdealerCheckWalletBalance() throws InterruptedException
+	public String validateSubdealerCheckBalance(String checkWalletBalance) throws Exception
 	{
 		
-//		starBtn.click();
-		textField.sendKeys("*878*999*8#");
+//		starBtn.click(); 
+//		textField.sendKeys("*878*999*8#");
+		textField.sendKeys(checkWalletBalance);
 		callButon.click();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		
-		String balance = walletBalance_Popup.getText();
+		String balance = walletBalanceResponse.getText();
 		Thread.sleep(6000);
 		
 		ok_Btn.click();

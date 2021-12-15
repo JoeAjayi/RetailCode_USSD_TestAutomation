@@ -6,6 +6,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
 
+import com.fbistech.Utility.LaunchMobileUtility;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -20,83 +22,65 @@ public class BasePage {
 	
 	
 	
-	
-	/*---Reference Variables----*/
-	public Properties prop;
 
 	
-//	this constructor is accepting AndroidDriver as an object , it takes the driver object and assign it to 
-//	AndroidDriver driver object
+//	this constructor is accepting AppiumDriver as an object , it takes the driver object and assign it to 
+//	Appium Driver driver object
 	
 	public BasePage(AppiumDriver driver) 
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
-//		LaunchMobileUtility.getAndroidDriver();
-
-		
-
-//		initialize input 
-		FileInputStream input = null; 
-			
-		try 
-		{
-//			Now instantiate by calling the constructor of properties  
-			prop = new Properties();
-				
-//			Instantiate 
-			input = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/fbistech/config/config.properties");	
-//			input = new FileInputStream("/Users/fbistech-qa/eclipse-workspace/RetailCode_USSD/src/main/java/com/fbistech/config/config.properties");
-
-//			Load file input stream 
-			prop.load(input);		
-		}
-		catch (FileNotFoundException e) 
-		{ 
-			System.out.println("Errors in config.prop block are catch and printed ");
-//			e.printStackTrace();
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		finally 
-		{
-			if (input != null) 
-			{
-				try 
-				{
-					input.close();
-				} 
-				catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
+//		LaunchMobileUtility.initializeMobileAndroidDriver();
 
 		
 		
 		
 		
-//		try  
-//		{
-//			prop = new Properties();
-////		    FileInputStream input = new FileInputStream("/Users/fbistech-qa/eclipse-workspace/RetailCode_USSD/src/main/java/com/fbistech/config/config.properties");
-//			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/fbistech/config/config.properties");
-//			prop.load(input);	
+		/*---Reference Variables----*/
+//		public Properties prop;
+
+////		initialize input 
+//		FileInputStream input = null; 
 //			
+//		try 
+//		{
+////			Now instantiate by calling the constructor of properties  
+//			prop = new Properties();
+//				
+////			Instantiate 
+//			input = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/fbistech/config/config.properties");	
+//			
+////			Load file input stream 
+//			prop.load(input);		
 //		}
-//			catch (FileNotFoundException e) 
+//		catch (FileNotFoundException e) 
 //		{ 
 //			System.out.println("Errors in config.prop block are catch and printed ");
-//			e.printStackTrace();
+////			e.printStackTrace();
 //		}
-//			catch (Exception e)
+//		catch (Exception e)
 //		{
 //			e.printStackTrace();
 //		}
+//		finally 
+//		{
+//			if (input != null) 
+//			{
+//				try 
+//				{
+//					input.close();
+//				} 
+//				catch (Exception e)
+//				{
+//					e.printStackTrace();
+//				}
+//			}
+//		}
+
+		
+	
 	}
 	
 

@@ -45,7 +45,7 @@ public class DirectFunding_SubDealerToRetailer_UnderDealer extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
+	private AndroidElement accountBalanceResponse;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
@@ -60,21 +60,23 @@ public class DirectFunding_SubDealerToRetailer_UnderDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerFundRetailer_UnderDealer() throws Exception
+	public String validateSubdealerFundRetailer_UnderDealer(String subDealerFundRetailer_UnderDealer, String subDealer_PIN) throws Exception
 	{
 		
-//		starBtn.click();
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textInputField.sendKeys("*878*999*33*004080*2#");
+//		starBtn.click();	
+//		textInputField.sendKeys("*878*999*33*004080*2#"); 
+		textInputField.sendKeys(subDealerFundRetailer_UnderDealer);
 		callButton.click();
-		Thread.sleep(8000);
+		Thread.sleep(8000); 
 		
-		pinInPutField.sendKeys("*999*1234");
+		
+		pinInPutField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
 		Thread.sleep(5000);
 		
-		String balance = accountBalancePopUp.getText();
-		Thread.sleep(6000);
+		
+		String balance = accountBalanceResponse.getText();
+		Thread.sleep(7000);
 		
 		ok_Button.click();
 

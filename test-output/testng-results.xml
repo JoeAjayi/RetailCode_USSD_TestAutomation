@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43683" started-at="2021-12-12T20:36:22 WAT" finished-at="2021-12-12T20:37:06 WAT">
+  <suite name="Default suite" duration-ms="44675" started-at="2021-12-15T15:01:41 WAT" finished-at="2021-12-15T15:02:25 WAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43683" started-at="2021-12-12T20:36:22 WAT" finished-at="2021-12-12T20:37:06 WAT">
-      <class name="com.fbistech.SubDealer_TestCase.ApproveCustomerRechargeLaterRequest_SubDealer_TestCase">
-        <test-method status="PASS" signature="verifySubDealerCanCheckTransactionHistory()[pri:1, instance:com.fbistech.SubDealer_TestCase.ApproveCustomerRechargeLaterRequest_SubDealer_TestCase@55de24cc]" name="verifySubDealerCanCheckTransactionHistory" duration-ms="43655" started-at="2021-12-12T20:36:23 WAT" finished-at="2021-12-12T20:37:06 WAT">
+    <test name="Default test" duration-ms="44675" started-at="2021-12-15T15:01:41 WAT" finished-at="2021-12-15T15:02:25 WAT">
+      <class name="com.fbistech.SubDealer_TestCase.Transaction_HistorySubDealer_TestCase">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.fbistech.SubDealer_TestCase.Transaction_HistorySubDealer_TestCase@210ab13f]" name="setUp" is-config="true" duration-ms="105" started-at="2021-12-15T15:01:41 WAT" finished-at="2021-12-15T15:01:41 WAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifySubDealerCanCheckTransactionHistory()[pri:1, instance:com.fbistech.SubDealer_TestCase.Transaction_HistorySubDealer_TestCase@210ab13f]" name="verifySubDealerCanCheckTransactionHistory" duration-ms="38522" started-at="2021-12-15T15:01:41 WAT" finished-at="2021-12-15T15:02:19 WAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubDealerCanCheckTransactionHistory -->
-      </class> <!-- com.fbistech.SubDealer_TestCase.ApproveCustomerRechargeLaterRequest_SubDealer_TestCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.fbistech.SubDealer_TestCase.Transaction_HistorySubDealer_TestCase@210ab13f]" name="tearDown" is-config="true" duration-ms="6004" started-at="2021-12-15T15:02:19 WAT" finished-at="2021-12-15T15:02:25 WAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.fbistech.SubDealer_TestCase.Transaction_HistorySubDealer_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

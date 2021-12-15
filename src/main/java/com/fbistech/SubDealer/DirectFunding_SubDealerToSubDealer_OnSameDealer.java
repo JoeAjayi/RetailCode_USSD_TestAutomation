@@ -56,25 +56,23 @@ public class DirectFunding_SubDealerToSubDealer_OnSameDealer extends BasePage{
 //	private AndroidElement smsCancel_Btn;
 	
 	
-	
 
-	
-//	public void SubdealerToFundSubdealer_OnSameDealer(String subDealerFundRetailer_OnDownline, String subDealer_PIN) throws Exception
-	public String validateSubdealerFundSubdealer_OnSameDealer() throws Exception
+	public String validateSubdealerFundSubdealer_OnSameDealer(String subDealerFundSubdealer_OnSameDealer, 
+			String subDealer_PIN)throws Exception
 	{
-//		textField.sendKeys(subDealerFundRetailer_OnDownline);
-		textField.sendKeys("*878*999*33*00695*5#");
+//		textField.sendKeys("*878*999*33*00695*5#");
+		textField.sendKeys(subDealerFundSubdealer_OnSameDealer);
 		callButton.click();
 		Thread.sleep(8000);
+		 
 		
-		
-		pinInputField.sendKeys("*999*1234");
+		pinInputField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
 		Thread.sleep(5000);
 		
 		
 		String balance = accountBalanceResponse.getText();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		
 		balanceOK_Button.click();
 		

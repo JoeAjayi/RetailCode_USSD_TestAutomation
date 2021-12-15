@@ -59,22 +59,22 @@ public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerRecallFund_from_SubDealer() throws Exception
+	public String validateSubdealerRecallFund_from_SubDealer(String subDealerRecallFund_from_SubDealer, 
+			String subDealerRecallAmountS_S, String subDealer_PIN) throws Exception
 	{
-		
 //		starBtn.click();
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textInputField.sendKeys("*878*999*33*1*00695#");
+//		textInputField.sendKeys("*878*999*33*1*00695#");
+		textInputField.sendKeys(subDealerRecallFund_from_SubDealer);
 		callButton.click();
 		Thread.sleep(8000);
 		
 //		Amount to Recall
-		pinInPutField.sendKeys("*999*5");
+		pinInPutField.sendKeys(subDealerRecallAmountS_S);
 		sendPinButton.click();
 		Thread.sleep(5000);
 		
 //		Enter PIN to complete Fund Recall
-		pinInPutField.sendKeys("*999*1234");
+		pinInPutField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
 		Thread.sleep(5000);
 		

@@ -2,6 +2,7 @@ package com.fbistech.Utility;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -36,7 +37,8 @@ public class LaunchMobileUtility {
 		
 		URL url = new URL("http://127.0.0.1:4723/wd/hub"); 
 //		driver = new AndroidDriver<MobileElement> (url, caps);
-		driver = new AppiumDriver<MobileElement> (url, caps); 
+		driver = new AppiumDriver<MobileElement> (url, caps);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 			
 //		driver = (AppiumDriv r<MobileElement>) new AppiumDriver<MobileElement> (url, caps); //object of android driver 
@@ -52,7 +54,7 @@ public class LaunchMobileUtility {
 	 		System.out.println("Could not read Mobile setCapability");
 //	 		e.printStackTrace();
 	 	}
-	 return (AppiumDriver) driver;
+	 	return (AppiumDriver) driver;
 	  
 	}
 

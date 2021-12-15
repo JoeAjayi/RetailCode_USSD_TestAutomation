@@ -36,7 +36,7 @@ public class Transaction_HistorySubDealer extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
+	private AndroidElement accountBalanceResponse;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
@@ -51,19 +51,15 @@ public class Transaction_HistorySubDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerCanView_TransactionHistory() throws Exception
+	public String validateSubdealerCheck_TransactionHistory(String checkTransactionHistory) throws Exception
 	{
-		
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*999*11#");
+//		textField.sendKeys("*878*999*11#");
+		textField.sendKeys(checkTransactionHistory);
 		callButton.click();
 		Thread.sleep(8000);
 		
-//		pinInPutField.sendKeys("*999*1234");
-//		sendPinButton.click();
-//		Thread.sleep(5000);
 		
-		String balance = accountBalancePopUp.getText();
+		String balance = accountBalanceResponse.getText();
 		Thread.sleep(8000);
 		
 		ok_Button.click();
