@@ -1,4 +1,4 @@
-package com.fbistech.SubDealer;
+package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -6,30 +6,22 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
+public class Transaction_HistorySubDealer extends BasePage {
+
 	
 //	Initialize the Page Objects
-	public FundRecallSubDealer_To_SubDealerOnSameDealer(AppiumDriver driver)
+	public Transaction_HistorySubDealer (AppiumDriver driver)
 	{
 		super(driver);
 	}
 	
 	
 	
-	
-	
-//	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Asterisk\"]/android.widget.TextView") 
-//	private AndroidElement starBtn;
-//	
-//	@AndroidFindBy(xpath = "//*[@resource-id='com.samsung.android.contacts:id/digits']") 
-//	private AndroidElement textField;	
-//	
-//	@AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc=\"Call button\"]")
-//	private AndroidElement callButton;
+
 	
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
-	private AndroidElement textInputField;	
+	private AndroidElement textField;	
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement callButton;
@@ -59,31 +51,20 @@ public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerRecallFund_from_SubDealer(String subDealerRecallFund_from_S_OnSameDealer, 
-			String subDealerRecallAmountS_S, String subDealer_PIN) throws Exception
+	public String validateSubdealerCheck_TransactionHistory(String checkTransactionHistory) throws Exception
 	{
-//		starBtn.click();
-//		textInputField.sendKeys("*878*999*33*1*00695#");
-		textInputField.sendKeys(subDealerRecallFund_from_S_OnSameDealer);
+//		textField.sendKeys("*878*999*11#");
+		textField.sendKeys(checkTransactionHistory);
 		callButton.click();
 		Thread.sleep(8000);
 		
-//		Amount to Recall
-		pinInPutField.sendKeys(subDealerRecallAmountS_S); 
-		sendPinButton.click();
-		Thread.sleep(5000);
-		
-//		Enter PIN to complete Fund Recall
-		pinInPutField.sendKeys(subDealer_PIN);
-		sendPinButton.click();
-		Thread.sleep(5000);
 		
 		String balance = accountBalanceResponse.getText();
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		
 		ok_Button.click();
 
 		return balance;
 	}
-
+	
 }

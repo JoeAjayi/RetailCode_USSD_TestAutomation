@@ -1,4 +1,4 @@
-package com.fbistech.SubDealer;
+package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -6,10 +6,10 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
+public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
 	
 //	Initialize the Page Objects
-	public FundRecallSubDealer_To_RetailerUnderDealer(AppiumDriver driver)
+	public FundRecallSubDealer_To_SubDealerOnSameDealer(AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -28,7 +28,6 @@ public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
 //	private AndroidElement callButton;
 	
 	
-
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
 	private AndroidElement textInputField;	
 	
@@ -45,7 +44,7 @@ public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePrompt;
+	private AndroidElement accountBalanceResponse;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
@@ -57,20 +56,20 @@ public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 //	private AndroidElement invalidFund_PopUp;
 //
-	 
+	
 
 	
-	public String validateSubdealerRecallFund_from_RetailerUnderDealer(String subDealerRecallFund_from_R_D, 
-			String subDealerRecallAmountR_D, String subDealer_PIN) throws Exception
+	public String validateSubdealerRecallFund_from_SubDealer(String subDealerRecallFund_from_SubDealer, 
+			String subDealerRecallAmountS_S, String subDealer_PIN) throws Exception
 	{
 //		starBtn.click();
-//		textInputField.sendKeys("*878*999*33*1*004080#");
-		textInputField.sendKeys(subDealerRecallFund_from_R_D);  
-		callButton.click(); 
-		Thread.sleep(8000); 
+//		textInputField.sendKeys("*878*999*33*1*00695#");
+		textInputField.sendKeys(subDealerRecallFund_from_SubDealer);
+		callButton.click();
+		Thread.sleep(8000);
 		
 //		Amount to Recall
-		textInputField.sendKeys(subDealerRecallAmountR_D); 
+		pinInPutField.sendKeys(subDealerRecallAmountS_S);
 		sendPinButton.click();
 		Thread.sleep(5000);
 		
@@ -79,7 +78,7 @@ public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
 		sendPinButton.click();
 		Thread.sleep(5000);
 		
-		String balance = accountBalancePrompt.getText();
+		String balance = accountBalanceResponse.getText();
 		Thread.sleep(7000);
 		
 		ok_Button.click();

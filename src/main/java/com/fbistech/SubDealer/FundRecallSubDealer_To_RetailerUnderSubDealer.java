@@ -44,7 +44,7 @@ public class FundRecallSubDealer_To_RetailerUnderSubDealer extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalanceResponse;
+	private AndroidElement accountBalancePrompt;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
@@ -59,17 +59,17 @@ public class FundRecallSubDealer_To_RetailerUnderSubDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerRecallFund_from_RetailerUndeSubDealer(String subDealerRecallFund_from_RetailerUndeSubDealer, 
+	public String validateSubdealerRecallFund_from_RetailerUndeSubDealer(String subDealerRecallFund_from_R_S, 
 			String subDealerRecallAmountR_S, String subDealer_PIN) throws Exception
 	{
 		
 //		starBtn.click();
 //		textInputField.sendKeys("*878*999*33*1*002360#");
-		textInputField.sendKeys(subDealerRecallFund_from_RetailerUndeSubDealer);
+		textInputField.sendKeys(subDealerRecallFund_from_R_S); 
 		callButton.click();
-		Thread.sleep(8000);
+		Thread.sleep(8000); 
 		
-//		Amount to Recall
+//		Amount to Recall 
 		pinInPutField.sendKeys(subDealerRecallAmountR_S);
 		sendPinButton.click();
 		Thread.sleep(5000);
@@ -79,11 +79,11 @@ public class FundRecallSubDealer_To_RetailerUnderSubDealer extends BasePage {
 		sendPinButton.click();
 		Thread.sleep(5000);
 		
-		String balance = accountBalanceResponse.getText();
+		String balance = accountBalancePrompt.getText();
 		Thread.sleep(7000);
 		
 		ok_Button.click();
-
+ 
 		return balance;
 	}
 

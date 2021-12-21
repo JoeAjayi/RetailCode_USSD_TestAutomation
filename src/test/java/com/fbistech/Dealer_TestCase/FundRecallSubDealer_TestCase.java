@@ -1,4 +1,4 @@
-package com.fbistech.SubDealer_TestCase;
+package com.fbistech.Dealer_TestCase;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -34,7 +34,7 @@ public class FundRecallSubDealer_TestCase {
 	FundRecallSubDealer_To_RetailerUnderSubDealer subdealerRecallFund_from_R_S;
 	
 	DirectFunding_SubDealerToSubDealer_OnSameDealer subDealerFundSubdealer_OnSameDealer;
-	FundRecallSubDealer_To_SubDealerOnSameDealer subdealerRecallFund_from_Subdealer_OnSameDealer;
+	FundRecallSubDealer_To_SubDealerOnSameDealer subdealerRecallFund_from_Subdealer_Dealer;
 	 
 
 
@@ -51,7 +51,9 @@ public class FundRecallSubDealer_TestCase {
 		subdealerRecallFund_from_R_S = new FundRecallSubDealer_To_RetailerUnderSubDealer(driver);
 
 		subDealerFundSubdealer_OnSameDealer = new DirectFunding_SubDealerToSubDealer_OnSameDealer(driver);
-		subdealerRecallFund_from_Subdealer_OnSameDealer = new FundRecallSubDealer_To_SubDealerOnSameDealer(driver);
+		subdealerRecallFund_from_Subdealer_Dealer = new FundRecallSubDealer_To_SubDealerOnSameDealer(driver);
+
+		
 	}
 	
     
@@ -62,15 +64,14 @@ public class FundRecallSubDealer_TestCase {
 	@Test(priority = 1) 
 	public void verifySubDealerCanRecallFund_from_RetailerUnderDealer()throws Exception
 	{
-//		String fundToRetailer_Dealer = subDealerFundRetailer_UnderDealer.validateSubdealerFundRetailer_UnderDealer
-//				(prop.getProperty("subDealerFundRetailer_Dealer"), prop.getProperty("subDealer_PIN"));
-//		System.out.println(fundToRetailer_Dealer);
-//		Thread.sleep(19000);
-//		
+		String fundToRetailer_Dealer = subDealerFundRetailer_UnderDealer.validateSubdealerFundRetailer_UnderDealer
+				(prop.getProperty("subDealerFundRetailer_UnderDealer"), prop.getProperty("subDealer_PIN"));
+		System.out.println(fundToRetailer_Dealer);
+		Thread.sleep(19000);
+		
 		
 		String fundRecallFromRetailer_Dealer = subdealerRecallFund_from_R_D.validateSubdealerRecallFund_from_RetailerUnderDealer
-				(prop.getProperty("subDealerRecallFund_from_R_D"), prop.getProperty("subDealerRecallAmountR_D"),
-						prop.getProperty("subDealer_PIN"));
+				(prop.getProperty("subDealerRecallFundfromR_D"), prop.getProperty("subDealerRecallAmount"), prop.getProperty("subDealer_PIN"));
 		System.out.println(fundRecallFromRetailer_Dealer);
 		Thread.sleep(19000); 
 	}
@@ -79,18 +80,18 @@ public class FundRecallSubDealer_TestCase {
 	
 
 
-     
+    
 	@Test(priority = 2)
 	public void verifySubDealerCanRecallFund_from_RetailerOnSubDealerDownline()throws Exception
 	{
-//		String fundToRetailer_Subdealer = subDealerFundRetailer_UnderSubDealer.validateSubdealerFundRetailer_SubDealerDownline
-//				(prop.getProperty("subDealerFundRetailer_SubDealerDownline"), prop.getProperty("subDealer_PIN"));
-//		System.out.println(fundToRetailer_Subdealer);
-//		Thread.sleep(19000);
-		 
+		String fundToRetailer_Subdealer = subDealerFundRetailer_UnderSubDealer.validateSubdealerFundRetailer_SubDealerDownline
+				(prop.getProperty("subDealerFundRetailer_SubDealerDownline"), prop.getProperty("subDealer_PIN"));
+		System.out.println(fundToRetailer_Subdealer);
+		Thread.sleep(19000);
+		
 		
 		String fundRecallFromRetailer_Subdealer = subdealerRecallFund_from_R_S.validateSubdealerRecallFund_from_RetailerUndeSubDealer
-				(prop.getProperty("subDealerRecallFund_from_R_S"), prop.getProperty("subDealerRecallAmountR_S"), 
+				(prop.getProperty("subDealerRecallFund_from_RetailerUndeSubDealer"), prop.getProperty("subDealerRecallAmountR_S"), 
 						prop.getProperty("subDealer_PIN"));
 		System.out.println(fundRecallFromRetailer_Subdealer);
 		Thread.sleep(19000);
@@ -98,20 +99,20 @@ public class FundRecallSubDealer_TestCase {
 
     
      
- 	    
+	    
 	    
 		@Test(priority = 3)
 		public void verifySubDealerCanRecallFund_from_SubdealerOnSameDealer()throws Exception
 		{
-//			String fundToSubdealer_SameDealer = subDealerFundSubdealer_OnSameDealer.validateSubdealerFundSubdealer_OnSameDealer
-//					(prop.getProperty("subDealerFundSubdealer_OnSameDealer"), prop.getProperty("subDealer_PIN"));
-//			System.out.println(fundToSubdealer_SameDealer);
-//			Thread.sleep(19000);
-////			
-			String fundRecallFromS_OnSmDealer = subdealerRecallFund_from_Subdealer_OnSameDealer.validateSubdealerRecallFund_from_SubDealer
-					(prop.getProperty("subDealerRecallFund_from_S_OnSameDealer"), prop.getProperty("subDealerRecallAmountS_S"), 
-							prop.getProperty("subDealer_PIN")); 
-			System.out.println(fundRecallFromS_OnSmDealer);
+			String fundToSubdealer_SameDealer = subDealerFundSubdealer_OnSameDealer.validateSubdealerFundSubdealer_OnSameDealer
+					(prop.getProperty("subDealerFundSubdealer_OnSameDealer"), prop.getProperty("subDealer_PIN"));
+			System.out.println(fundToSubdealer_SameDealer);
+			Thread.sleep(19000);
+//			
+			String fundRecallFromRetailer_Subdealer = subdealerRecallFund_from_Subdealer_Dealer.validateSubdealerRecallFund_from_SubDealer
+					(prop.getProperty("subDealerRecallFund_from_SubDealer"), prop.getProperty("subDealerRecallAmountS_S"), 
+							prop.getProperty("subDealer_PIN"));
+			System.out.println(fundRecallFromRetailer_Subdealer);
 			Thread.sleep(19000);
 		}
 	

@@ -8,6 +8,7 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="verifySubDealerCanRecallFund_from_SubdealerOnSameDealer"/>
+          <include name="verifySubDealerCanRecallFund_from_RetailerOnSubDealerDownline"/>
         </methods>
       </class> <!-- com.fbistech.SubDealer_TestCase.FundRecallSubDealer_TestCase -->
     </classes>

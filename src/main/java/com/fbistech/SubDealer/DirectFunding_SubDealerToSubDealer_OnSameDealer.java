@@ -72,7 +72,7 @@ public class DirectFunding_SubDealerToSubDealer_OnSameDealer extends BasePage{
 		
 		
 		String balance = accountBalanceResponse.getText();
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		
 		balanceOK_Button.click();
 		

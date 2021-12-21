@@ -31,29 +31,31 @@ public class DirectFunding_SubDealerToDealer_Upline extends BasePage {
 //	@AndroidFindBy(xpath = "//*[@text='SEND']")
 //	private AndroidElement sendPIN_Btn;
 	
+	
+	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
+//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
+	private AndroidElement successPrompt;
+	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Btn;
 	
 	
-	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
+
 	
 	
-	public String validateSubDealerFundDealer_NotUpline() throws Exception
+	public String validateSubDealerFundDealer_NotUpline(String subDealerFundDealer_NotUpline, String subDealer_PIN ) throws Exception
 	{
-		
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*878*33*00*1#");
+//		textField.sendKeys("*878*878*33*00*1#");
+		textField.sendKeys(subDealerFundDealer_NotUpline);
 		callButton.click(); 
 		Thread.sleep(5000);
 		
-//		pinInPutField.sendKeys("1234");
+//		pinInPutField.sendKeys(subDealer_PIN);
 //		sendPIN_Btn.click();
 //		Thread.sleep(4000);
 		
-		String balance = accountBalancePopUp.getText();
-		Thread.sleep(5000);
+		String balance = successPrompt.getText();
+		Thread.sleep(8000);
 		
 		ok_Btn.click();
 

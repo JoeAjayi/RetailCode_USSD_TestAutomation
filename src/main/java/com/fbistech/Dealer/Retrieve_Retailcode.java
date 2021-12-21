@@ -1,4 +1,4 @@
-package com.fbistech.SubDealer;
+package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -34,28 +34,28 @@ public class Retrieve_Retailcode extends BasePage {
 
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-	private AndroidElement successPrompt;
+	private AndroidElement responseField_Popup;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']") 
 	private AndroidElement ok_Btn;
 	
 	
+//	public void userCheckBalance(String checkBalance) throws InterruptedException
 
-	public String validateSubdealerRetrieve_Retailcode(String subDealerRetrieve_Retailcode) throws InterruptedException
+	public String validateSubdealerRetrieve_Retailcode() throws InterruptedException
 	{
 //		starBtn.click();
-//		digits_InputField.sendKeys("*878*999*10#");
-		digits_InputField.sendKeys(subDealerRetrieve_Retailcode);
+		digits_InputField.sendKeys("*878*999*10#");
 		callButon.click();
 		Thread.sleep(6000);
 		
-		String balance = successPrompt.getText();
+		String balance = responseField_Popup.getText();
 		Thread.sleep(6000);
 		
 		ok_Btn.click();
 
-		return balance; 
+		return balance;
 	}	
 
 		

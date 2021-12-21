@@ -1,4 +1,4 @@
-package com.fbistech.SubDealer;
+package com.fbistech.Dealer;
 
 import com.fbistech.BasePage.BasePage;
 
@@ -7,10 +7,10 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class FundRequest_SubDelerToDealer extends BasePage{
+public class FundRequest_SubDelerToDealerUpline extends BasePage{
 
 	
-	public FundRequest_SubDelerToDealer (AppiumDriver driver)
+	public FundRequest_SubDelerToDealerUpline (AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -28,7 +28,7 @@ public class FundRequest_SubDelerToDealer extends BasePage{
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
+	private AndroidElement requestSuccess_Token;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Button;
@@ -39,19 +39,16 @@ public class FundRequest_SubDelerToDealer extends BasePage{
 	
 
 	
-//	public void SubdealerToFundSubdealer_OnSameDealer(String subDealerFundRetailer_OnDownline, String subDealer_PIN) throws Exception
-	public String validateSubdealerRequestFundFromDealer() throws Exception
+	public String validateFundRequestSubdealerToDealerUpline(String fundRequestSubdealerToDealerUpline, 
+			String subDealer_PIN) throws Exception
 	{
-//		textField.sendKeys(subDealerFundRetailer_OnDownline);
-		textField.sendKeys("*878*878*34*1#");
+//		textField.sendKeys("*878*878*34*1#");
+		textField.sendKeys(fundRequestSubdealerToDealerUpline);
 		call_Btn.click();
-		Thread.sleep(4000);
-//		oK_Btn.click();
-//		Thread.sleep(10000);
-//	
+		Thread.sleep(8000);
 		
-		String text = accountBalancePopUp.getText();
-		Thread.sleep(6000);
+		String text = requestSuccess_Token.getText();
+		Thread.sleep(10000);
 		
 		ok_Button.click();
 		return text;

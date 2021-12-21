@@ -62,47 +62,51 @@ public class Onboarding_SubDealerUnder_Dealer extends BasePage {
 //	*878*22*2*Dealer-RCode# .......Retailer onboard under Dealer
 //	*878*22*3*Sub-dealer-RCode#....Retailer onboard under Sub-dealer
 	
-	public String validateSubdealerOnboardUnderDealer() throws Exception
+	public String validateSubdealerOnboardUnderDealer(String subSealerOnboardUnderDealer, String subDealerName, String subRegion, 
+			String invalidPIN, String validPIN, String invalidPINtoConfirmPIN, String confirmPIN) throws Exception
 	{	
 //		Dial Short code 
 //		starBtn.click();
-		digits_InputField.sendKeys("878*999*22*1*00#");
+//		digits_InputField.sendKeys("878*999*22*1*00#");
+		digits_InputField.sendKeys(subSealerOnboardUnderDealer);
 		callButon.click();
 		Thread.sleep(3000);
 		
 		
 //		Enter Retailer's name 
-		text_InputField.sendKeys("*999*Joseph Sub-dealer");
+//		text_InputField.sendKeys("*999*Joseph Sub-dealer");
+		text_InputField.sendKeys(subDealerName);
 		sendText_Button.click();
 		Thread.sleep(3000);
 		
 		
 //		Enter Sub-Region 
-		text_InputField.sendKeys("*999*Lagos");
+//		text_InputField.sendKeys("*999*Lagos");
+		text_InputField.sendKeys(subRegion);
 		sendText_Button.click();
 		Thread.sleep(4000);
 		
 		
 //		Enter more than 4 digits to create PIN
-		text_InputField.sendKeys("*999*1234567");
+		text_InputField.sendKeys(invalidPIN);
 		sendText_Button.click();
 		Thread.sleep(4000);
 		
 		
 //		Enter 4 digits PIN
-		text_InputField.sendKeys("*999*1234");
+		text_InputField.sendKeys(validPIN);
 		sendText_Button.click();
 		Thread.sleep(4000);
 		
 		
 //		Enter wrong PIN to Confirm PIN
-		text_InputField.sendKeys("*999*123567PIN");
+		text_InputField.sendKeys(invalidPINtoConfirmPIN);
 		sendText_Button.click();
 		Thread.sleep(4000);
 		
 		
 //		Enter 4 digits PIN to confirm PIN
-		text_InputField.sendKeys("*999*1234");
+		text_InputField.sendKeys(confirmPIN);
 		sendText_Button.click();
 		Thread.sleep(6000);
 //		cancel_Button.click();

@@ -9,6 +9,10 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class DirectFunding_SubDealerToSubDealer_NotOnSameDealer extends BasePage {
 
+//	this is the first layer in Page object model which contain the web Object/webElement and page Actions/Methods  
+	
+	
+	
 //	Initialize the Page Objects
 	public DirectFunding_SubDealerToSubDealer_NotOnSameDealer(AppiumDriver driver)
 	{
@@ -51,13 +55,13 @@ public class DirectFunding_SubDealerToSubDealer_NotOnSameDealer extends BasePage
 
 	
 //	public void subdealerToFundRetailer_OnDownline(String subDealerFundRetailer_OnDownline, String subDealer_PIN) throws Exception
-	public String subdealerFundSubdealer_NotOnSameDealer() throws Exception
-	
+	public String subdealerFundSubdealer_NotOnSameDealer(String subDealerFundSubdealer_NotOnSameDealer, 
+			String subDealer_PIN) throws Exception
 	{ 
-//		textField.sendKeys(subDealerFundRetailer_OnDownline);
-		textField.sendKeys("*878*878*33*20423*1#");
+//		textField.sendKeys("*878*878*33*20423*1#");
+		textField.sendKeys(subDealerFundSubdealer_NotOnSameDealer);
 		callButton.click();
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 	
 //		Enter PIN 
 //		pinInPutField.sendKeys(subDealer_PIN);
@@ -66,7 +70,7 @@ public class DirectFunding_SubDealerToSubDealer_NotOnSameDealer extends BasePage
 //		Thread.sleep(5000);
 		
 		String balance = accountBalancePopUp.getText();
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		
 		ok_Button.click();
 

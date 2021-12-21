@@ -30,13 +30,13 @@ public class DirectFunding_SubDealerToRetailer_NotOnDownline extends BasePage {
 //	@AndroidFindBy(xpath = "//*[@text='SEND']")
 //	private AndroidElement sendPinButton;
 	
-	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
-	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Button;
+	
+	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
+//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
+	private AndroidElement successPrompt;
 	
 	
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
@@ -45,19 +45,20 @@ public class DirectFunding_SubDealerToRetailer_NotOnDownline extends BasePage {
 	
 
 	
-	public String validatesubdealerFundRetailer_NotOnDownline() throws Exception
+	public String validateSubdealerFundRetailer_NotOnDownline(String subDealerFundRetailer_NotOnDownline, 
+			String subDealer_PIN) throws Exception
 	{
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*878*33*318290*1#");
+//		textField.sendKeys("*878*878*33*318290*1#");
+		textField.sendKeys(subDealerFundRetailer_NotOnDownline);
 		callButton.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
-//		pinInPutField.sendKeys("3262");
+//		pinInPutField.sendKeys(subDealer_PIN );
 //		sendPinButton.click();
-//		Thread.sleep(7000);
+//		Thread.sleep(7000); 
 		
-		String balance = accountBalancePopUp.getText();
-		Thread.sleep(5000);
+		String balance = successPrompt.getText();
+		Thread.sleep(8000);
 		
 		ok_Button.click();
 
