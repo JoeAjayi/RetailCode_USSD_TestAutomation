@@ -7,10 +7,10 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class FundRequest_SubDelerToDealerUpline extends BasePage{
+public class FundRequest extends BasePage{
 
 	
-	public FundRequest_SubDelerToDealerUpline (AppiumDriver driver)
+	public FundRequest (AppiumDriver driver)
 	{
 		super(driver);
 	}
@@ -33,13 +33,13 @@ public class FundRequest_SubDelerToDealerUpline extends BasePage{
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Button;
 	
-//	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
+//	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']") 
 	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement token_Message;
 	
 
 	
-	public String validateFundRequestSubdealerToDealerUpline(String fundRequestSubdealerToDealerUpline, 
+	public String validateFundRequest(String fundRequestSubdealerToDealerUpline, 
 			String subDealer_PIN) throws Exception
 	{
 //		textField.sendKeys("*878*878*34*1#");

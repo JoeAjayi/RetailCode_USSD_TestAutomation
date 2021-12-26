@@ -66,12 +66,12 @@ public class DirectFunding_SubDealerToRetailer_UnderDealer extends BasePage {
 //		textInputField.sendKeys("*878*999*33*004080*2#"); 
 		textInputField.sendKeys(subDealerFundRetailer_Dealer);
 		callButton.click();
-		Thread.sleep(8000); 
+		Thread.sleep(6000); 
 		 
 		
 		pinInPutField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 		
 		String balance = successPrompt.getText();

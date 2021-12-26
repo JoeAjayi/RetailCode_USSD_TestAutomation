@@ -32,27 +32,28 @@ public class VendAirtime_SubDealerToSubDealer_SameUpline extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
+	private AndroidElement accountBalancePrompt;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement balanceOK_Button;
 	
 
 	
-	public String subdealerVendAirtimeToSubdealer_SameUpline() throws Exception
+	public String subdealerVendAirtimeToSubdealer_SameUpline(String subDealerVendAirtimeToSubDealer_SameUpline, 
+			String subDealer_PIN) throws Exception
 
 	{
-		textField.sendKeys("*878*878*08145170013*1#");
+		textField.sendKeys(subDealerVendAirtimeToSubDealer_SameUpline);
 		dial_Button.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		 
 //		Enter PIN 
-		pinInputField.sendKeys("1234");
+		pinInputField.sendKeys(subDealer_PIN);
 		sendPIN_Btn.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		
-		String balance = accountBalancePopUp.getText();
+		String balance = accountBalancePrompt.getText();
 		Thread.sleep(6000);
 		
 		balanceOK_Button.click();

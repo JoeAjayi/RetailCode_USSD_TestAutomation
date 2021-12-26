@@ -9,12 +9,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class CheckSubDealerWalletBalance extends BasePage {
 	
-	public CheckSubDealerWalletBalance(AppiumDriver driver)
-	{
-		super(driver);
-	}
 	
-
 	
 	
 //	@AndroidFindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Asterisk\"]/android.widget.TextView") 
@@ -45,6 +40,15 @@ public class CheckSubDealerWalletBalance extends BasePage {
 	
 	
 	
+	
+	
+	public CheckSubDealerWalletBalance(AppiumDriver driver)
+	{
+		super(driver);
+	}
+	
+
+	
 //	Abstraction method
 //	public void userCheckBalance(String checkBalance) throws InterruptedException
 
@@ -53,7 +57,6 @@ public class CheckSubDealerWalletBalance extends BasePage {
 	{
 		
 //		starBtn.click(); 
-//		textField.sendKeys("*878*999*8#");
 		textField.sendKeys(checkWalletBalance);
 		callButon.click();
 		Thread.sleep(7000);

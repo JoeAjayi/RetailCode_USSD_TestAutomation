@@ -35,28 +35,29 @@ public class VendAirtime_SubDealerToDealer_NotUpline extends BasePage {
 	private AndroidElement accountBalancePopUp;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
-	private AndroidElement balanceOK_Button;
+	private AndroidElement OK_Button;
 	
 
 	
-	public String validateSubdealerVendAirtimeToDealer_NotUpline() throws Exception
+	public String validateSubdealerVendAirtimeToDealer_NotUpline(String subDealerVendAirtimeToDealer_NotUpline, 
+			String subDealer_PIN) throws Exception
 	{
 //		Dial Short code 
-
-		textField.sendKeys("*878*878*08037007878*1#");
+//		textField.sendKeys("*878*878*08037007878*1#"); 
+		textField.sendKeys(subDealerVendAirtimeToDealer_NotUpline);
 		dial_Button.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		 
 //		Enter PIN 
-		pinInputField.sendKeys("1234");
+		pinInputField.sendKeys(subDealer_PIN);
 		sendPIN_Btn.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		
 		String balance = accountBalancePopUp.getText();
 		Thread.sleep(6000);
 		
-		balanceOK_Button.click();
+		OK_Button.click();
 		return balance;
 	} 
 }

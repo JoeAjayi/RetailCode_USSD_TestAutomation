@@ -47,17 +47,18 @@ public class VendAirtime_SubDealerToCustomer extends BasePage {
 
 	
 	
-	public String validateSubdealerVendAirtimeTo_Customer() throws Exception
+	public String validateSubdealerVendAirtimeTo_Customer(String subDealerVendAirtimeToCustomer1, String subDealer_PIN) throws Exception
 	{ 
 //		Dial Short code 
-		textField.sendKeys("*878*878*09135212172*1#");
+//		textField.sendKeys("*878*878*09135212172*1#");
+		textField.sendKeys(subDealerVendAirtimeToCustomer1);
 		call_Btn.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		
 //		Enter PIN 
-		pinInPutField.sendKeys("1234");
+		pinInPutField.sendKeys(subDealer_PIN);
 		sendPIN_Btn.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 //		Thread.sleep(10000);
 //		smsCancel_Btn.click();
@@ -68,7 +69,6 @@ public class VendAirtime_SubDealerToCustomer extends BasePage {
 		
 		balanceOK_Button.click();
 		return balance;
-		
 		
 		
 	} 

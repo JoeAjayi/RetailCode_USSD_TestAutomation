@@ -39,16 +39,17 @@ public class VendAirtime_SubDealerToRetailer_NotDownline extends BasePage {
 	
 
 	
-	public String validateSubdealerVendAirtimeToRetailer_NotOnDownline() throws Exception
+	public String validateSubdealerVendAirtimeToRetailer_NotOnDownline(String subDealerVendAirtimeToRetailer_NotOnDownline,
+			String subDealer_PIN) throws Exception
 	{ 
-		textField.sendKeys("*878*878*07069062924*1#");
+		textField.sendKeys(subDealerVendAirtimeToRetailer_NotOnDownline);
 		dial_Button.click(); 
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		
 //		Enter PIN 
-		pinInputField.sendKeys("1234");
+		pinInputField.sendKeys(subDealer_PIN);
 		sendPIN_Button.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		
 		String balance = accountBalancePopUp.getText();

@@ -62,11 +62,11 @@ public class FundRecallSubDealer_TestCase {
 	@Test(priority = 1) 
 	public void verifySubDealerCanRecallFund_from_RetailerUnderDealer()throws Exception
 	{
-//		String fundToRetailer_Dealer = subDealerFundRetailer_UnderDealer.validateSubdealerFundRetailer_UnderDealer
-//				(prop.getProperty("subDealerFundRetailer_Dealer"), prop.getProperty("subDealer_PIN"));
-//		System.out.println(fundToRetailer_Dealer);
-//		Thread.sleep(19000);
-//		
+		String fundToRetailer_Dealer = subDealerFundRetailer_UnderDealer.validateSubdealerFundRetailer_UnderDealer
+				(prop.getProperty("subDealerFundRetailer_Dealer"), prop.getProperty("subDealer_PIN"));
+		System.out.println(fundToRetailer_Dealer);
+		Thread.sleep(19000);
+		
 		
 		String fundRecallFromRetailer_Dealer = subdealerRecallFund_from_R_D.validateSubdealerRecallFund_from_RetailerUnderDealer
 				(prop.getProperty("subDealerRecallFund_from_R_D"), prop.getProperty("subDealerRecallAmountR_D"),
@@ -80,7 +80,7 @@ public class FundRecallSubDealer_TestCase {
 
 
      
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	public void verifySubDealerCanRecallFund_from_RetailerOnSubDealerDownline()throws Exception
 	{
 //		String fundToRetailer_Subdealer = subDealerFundRetailer_UnderSubDealer.validateSubdealerFundRetailer_SubDealerDownline
@@ -100,7 +100,7 @@ public class FundRecallSubDealer_TestCase {
      
  	    
 	    
-		@Test(priority = 3)
+//		@Test(priority = 3)
 		public void verifySubDealerCanRecallFund_from_SubdealerOnSameDealer()throws Exception
 		{
 //			String fundToSubdealer_SameDealer = subDealerFundSubdealer_OnSameDealer.validateSubdealerFundSubdealer_OnSameDealer

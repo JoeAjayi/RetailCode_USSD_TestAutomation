@@ -77,10 +77,10 @@ public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
 //		Enter PIN to complete Fund Recall
 		pinInPutField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 		String balance = accountBalancePrompt.getText();
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		
 		ok_Button.click();
 

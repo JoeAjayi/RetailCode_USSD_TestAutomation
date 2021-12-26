@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.fbistech.SubDealer_TestCase.FundRecallSubDealer_TestCase">
+      <class name="com.fbistech.SubDealer_TestCase.FundRequest_TestCase">
         <methods>
-          <include name="tearDown"/>
+          <include name="verifySubdealerCannotRequestFundfromSubdealer_NotOnSameUpline"/>
           <include name="setUp"/>
-          <include name="verifySubDealerCanRecallFund_from_SubdealerOnSameDealer"/>
-          <include name="verifySubDealerCanRecallFund_from_RetailerOnSubDealerDownline"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.fbistech.SubDealer_TestCase.FundRecallSubDealer_TestCase -->
+      </class> <!-- com.fbistech.SubDealer_TestCase.FundRequest_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

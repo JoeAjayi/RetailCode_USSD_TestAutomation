@@ -14,7 +14,7 @@ import com.fbistech.SubDealer.DirectFunding_SubDealerToSubDealer_OnSameDealer;
 import com.fbistech.SubDealer.FundRecallSubDealer_To_RetailerUnderDealer;
 import com.fbistech.SubDealer.FundRecallSubDealer_To_RetailerUnderSubDealer;
 import com.fbistech.SubDealer.FundRecallSubDealer_To_SubDealerOnSameDealer;
-import com.fbistech.SubDealer.FundRequest_SubDelerToDealerUpline;
+import com.fbistech.SubDealer.FundRequest;
 import com.fbistech.Utility.LaunchMobileUtility;
 
 import io.appium.java_client.AppiumDriver;
@@ -28,7 +28,7 @@ public class FundRequest_TestCase {
 	 
 	public static FileInputStream input;
 	
-	FundRequest_SubDelerToDealerUpline subdelerRequestFundFromDealer;
+	FundRequest fundRequestToAllTps;
 	
 	
 
@@ -38,20 +38,29 @@ public class FundRequest_TestCase {
 	public void setUp()
 	{
 		initializePropFile();
-		subdelerRequestFundFromDealer = new FundRequest_SubDelerToDealerUpline(driver);
+		fundRequestToAllTps = new FundRequest(driver);
 	}
 
 	
 
 	@Test(priority = 1)
-
-	public void verifyFundRequestSubdealerToDealerUpline()throws Exception
+	public void verifySubdealerCanRequestFundfromDealerUpline()throws Exception
 	{
-		String getWalletBalanceText = subdelerRequestFundFromDealer.validateFundRequestSubdealerToDealerUpline
+		String success_Token = fundRequestToAllTps.validateFundRequest
 				(prop.getProperty("fundRequestSubdealerToDealerUpline"), prop.getProperty("subDealer_PIN"));
-		System.out.println(getWalletBalanceText);	
+		System.out.println(success_Token + " " + "_ FundRequestSubdealerToDealerUpline");
 		Thread.sleep(19000); 
-
+	}
+	
+	 
+	
+	@Test(priority = 2)
+	public void verifySubdealerCannotRequestFundfromDealer_NotUpline()throws Exception
+	{
+		String success_Token = fundRequestToAllTps.validateFundRequest
+				(prop.getProperty("fundRequestSubdealerToDealerNotUpline"), prop.getProperty("subDealer_PIN"));
+		System.out.println(success_Token + " " + "_ SubdealerCannotRequestFundfromDealerNotUpline");
+		Thread.sleep(19000); 
 	}
 	
 	
@@ -67,7 +76,7 @@ public class FundRequest_TestCase {
 	} 
 	
 	
-	
+	 
 	
 	
 	public void initializePropFile() 
@@ -83,7 +92,6 @@ public class FundRequest_TestCase {
 //			Load file input stream 
 			prop.load(input);	
 		}
-		
 		
 		catch (FileNotFoundException e) 
 		{ 

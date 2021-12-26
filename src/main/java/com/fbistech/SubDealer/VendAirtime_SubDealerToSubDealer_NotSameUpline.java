@@ -8,6 +8,8 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class VendAirtime_SubDealerToSubDealer_NotSameUpline extends BasePage {
 	
+	
+	
 	public VendAirtime_SubDealerToSubDealer_NotSameUpline(AppiumDriver driver)
 	{
 		super(driver);
@@ -33,27 +35,30 @@ public class VendAirtime_SubDealerToSubDealer_NotSameUpline extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalancePopUp;
+	private AndroidElement accountBalancePrompt;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement balanceOK_Button;
 	
 
 	
-	public String validateSubdealerVendAirtimeToSubDealer_NotSameUpline() throws Exception
+	
+	
+	public String validateSubdealerVendAirtimeToSubDealer_NotSameUpline(String subDealerVendAirtimeToSubDealer_NotSameUpline, 
+			String subDealer_PIN) throws Exception
 	{
 //		Dial Short code 
-		textField.sendKeys("*878*878*08137507455*1#");
+		textField.sendKeys(subDealerVendAirtimeToSubDealer_NotSameUpline);
 		dial_Button.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		 
 //		Enter PIN 
-		pinInputField.sendKeys("1234");
+		pinInputField.sendKeys(subDealer_PIN);
 		sendPIN_Btn.click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		
-		String balance = accountBalancePopUp.getText();
+		String balance = accountBalancePrompt.getText();
 		Thread.sleep(6000);
 		
 		balanceOK_Button.click();

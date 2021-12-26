@@ -78,7 +78,7 @@ public class CheckSubDealerWalletBalance_TestCase {
 			prop = new Properties();
 				
 //			Instantiate 
-			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/fbistech/config/config.properties");	
+			FileInputStream input = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/com/fbistech/config/config.properties");	
 
 //			Load file input stream 
 			prop.load(input);	
