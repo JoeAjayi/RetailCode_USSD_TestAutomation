@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.fbistech.SubDealer.FundRequest;
+import com.fbistech.SubDealer.ApproveAirtimeRequest;
 import com.fbistech.Utility.LaunchMobileUtility;
 
 import io.appium.java_client.AppiumDriver;
@@ -23,7 +23,7 @@ public class ApproveAirtimeRequest_TestCase {
 	 
 	public static FileInputStream input;
 	
-	FundRequest fundRequestToAllTps;
+	ApproveAirtimeRequest airtimeRequestApproval;
 	
 	
 
@@ -33,32 +33,51 @@ public class ApproveAirtimeRequest_TestCase {
 	public void setUp()
 	{
 		initializePropFile();
-		fundRequestToAllTps = new FundRequest(driver);
+		 airtimeRequestApproval = new ApproveAirtimeRequest(driver);
 	}
 	
 
 	@Test(priority = 1)
-
-	public void verifySubDealerCanApproveRetailerAirtimeReques()throws Exception
+	public void verifySubDealerCanApproveCustomerAirtimeRequest()throws Exception
 	{
-		
-		
+		String success_Prompt = airtimeRequestApproval.validateSubdealerApproveAirtimeRequest
+		(prop.getProperty("subDealerApproveCustomerAirtimeRequest"), prop.getProperty("subDealer_PIN"));
+		System.out.println(success_Prompt + " " + "_ SubDealerApproveCustomerAirtimeReques");
+		Thread.sleep(19000); 
+	}
 	
-
+	
+	
+//	@Test(priority = 2)
+	public void verifySubDealerCanApproveRetailerAirtimeRequest()throws Exception
+	{
+		String success_Prompt = airtimeRequestApproval.validateSubdealerApproveAirtimeRequest
+		(prop.getProperty("subDealerApproveRetailerAirtimeRequest"), prop.getProperty("subDealer_PIN"));
+		System.out.println(success_Prompt + " " + "_ SubDealerApproveRetailerAirtimeReques");
+		Thread.sleep(19000); 
 	}
 
+	
+	
+//	@Test(priority = 3)
+	public void verifySubDealerCanApproveDealerAirtimeRequest()throws Exception
+	{
+		String success_Prompt = airtimeRequestApproval.validateSubdealerApproveAirtimeRequest
+		(prop.getProperty("subDealerApproveDealerAirtimeRequest"), prop.getProperty("subDealer_PIN"));
+		System.out.println(success_Prompt + " " + "_ SubDealerApproveDealerAirtimeReques");
+		Thread.sleep(19000); 
+	}
+	
 	
 	
 	@AfterMethod 
 	public void tearDown() throws Exception
 	{
 		Thread.sleep(6000);
-//		driver.quit(); 
+		driver.quit(); 
 	} 
 	
-	
-	 
-	
+
 	
 	public void initializePropFile() 
 	{

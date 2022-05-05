@@ -9,6 +9,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class VendAirtime_SubDealerToCustomer extends BasePage {
 	
+	
 	public VendAirtime_SubDealerToCustomer(AppiumDriver driver)
 	{
 		super(driver);
@@ -66,7 +67,7 @@ public class VendAirtime_SubDealerToCustomer extends BasePage {
 		
 		String balance = accountBalancePopUp.getText();
 		Thread.sleep(6000);
-		
+		 
 		balanceOK_Button.click();
 		return balance;
 		

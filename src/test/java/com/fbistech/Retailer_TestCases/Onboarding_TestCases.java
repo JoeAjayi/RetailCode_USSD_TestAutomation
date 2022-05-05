@@ -6,7 +6,7 @@ import com.fbistech.Retailer.OnboardingDirectly_RetailerUnder_FBIS_Dealer;
 import com.fbistech.Retailer.OnboardingDirectly_RetailerUnder_FBIS_SubDealer;
 import com.fbistech.Retailer.Onboarding_RetailerUnder_Dealer;
 import com.fbistech.Retailer.Onboarding_RetailerUnder_SubDealer;
-import com.fbistech.Utility.LaunchSamsungMobileUtilit;
+import com.fbistech.Utility.LaunchMobile_SMS_Utility;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -14,7 +14,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class Onboarding_TestCases {
 	
 //	AndroidDriver driver = LaunchMobileUtility.getAndroidDriver();
-	AppiumDriver driver = LaunchSamsungMobileUtilit.initializeMobileAndroidDriver();
+	AppiumDriver driver = LaunchMobile_SMS_Utility.initializeMobileAndroidDriver();
 
 	
 	

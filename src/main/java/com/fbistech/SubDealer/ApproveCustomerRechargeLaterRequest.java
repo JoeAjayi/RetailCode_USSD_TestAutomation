@@ -1,17 +1,22 @@
 package com.fbistech.SubDealer;
 
+import org.openqa.selenium.support.PageFactory;
+
 import com.fbistech.BasePage.BasePage;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class ApproveCustomerRechargeLaterRequest_SubDealer extends BasePage {
+public class ApproveCustomerRechargeLaterRequest extends BasePage {
+	
 	
 //	Initialize the Page Objects
-	public ApproveCustomerRechargeLaterRequest_SubDealer (AppiumDriver driver)
+	public ApproveCustomerRechargeLaterRequest(AppiumDriver driver)
 	{
 		super(driver);
+//		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
 	
@@ -33,7 +38,7 @@ public class ApproveCustomerRechargeLaterRequest_SubDealer extends BasePage {
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement accountBalanceResponse;
+	private AndroidElement successPrompt;
 	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
@@ -48,30 +53,25 @@ public class ApproveCustomerRechargeLaterRequest_SubDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerApproveCustomerRechargeLaterRequest() throws Exception
+	public String validateSubdealerApproveCustomerRechargeLaterRequest(String subDealerApproveCustomerRechargeLaterRequest, 
+			String subDealer_PIN) throws Exception
 	{
-		
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textInputField.sendKeys("*878*999*3*84#");
+		textInputField.sendKeys(subDealerApproveCustomerRechargeLaterRequest);
 		callButton.click();
-		Thread.sleep(8000);
-		
-////		Amount to Recall
-//		pinInPutField.sendKeys("*999*3");
-//		sendPinButton.click();
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 //		Enter PIN to complete Fund Recall
-		pinInPutField.sendKeys("*999*1234");
+		pinInPutField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		
-		String balance = accountBalanceResponse.getText();
-		Thread.sleep(7000);
+		
+		String text = successPrompt.getText();		
+		Thread.sleep(6000);
 		
 		ok_Button.click();
 
-		return balance;
+		return text;
 	}
 
 }

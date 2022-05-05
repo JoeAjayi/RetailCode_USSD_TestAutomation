@@ -50,7 +50,7 @@ public class FundRequest extends BasePage{
 		String text = requestSuccess_Token.getText();
 		Thread.sleep(10000);
 		
-		ok_Button.click();
+		ok_Button.click(); 
 		return text;
 	}
 	

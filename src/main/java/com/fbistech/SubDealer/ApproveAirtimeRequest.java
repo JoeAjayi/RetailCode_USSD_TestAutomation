@@ -2,17 +2,16 @@ package com.fbistech.SubDealer;
 
 import com.fbistech.BasePage.BasePage;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class ApproveAirtimeRequest_Retailer extends BasePage{
+public class ApproveAirtimeRequest extends BasePage{
 
 	
-	public ApproveAirtimeRequest_Retailer(AndroidDriver driver)
+	public ApproveAirtimeRequest(AppiumDriver driver)
 	{
 		super(driver);
-//		PageFactory.initElements(driver, this);
 	}
 	
 
@@ -33,42 +32,43 @@ public class ApproveAirtimeRequest_Retailer extends BasePage{
 	private AndroidElement sendPIN_Btn;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
-	private AndroidElement balanceOK_Btn;
+	private AndroidElement ok_Button;
+	
+	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
+	private AndroidElement fundTransferPopUpMessage;
+
+	
+	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
+//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
+	private AndroidElement successPrompt;
+	
 	
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Close\"]")
 	private AndroidElement smsCancel_Btn;
 	
-	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-	private AndroidElement fundTransferPopUpMessage;
 	
 
 	
-	public void SubdealerApproveRetailerAiritmeRequest() throws Exception
-	
+	public String validateSubdealerApproveAirtimeRequest(String subDealerApproveCustomerAirtimeRequest, String subDealer_PIN) throws Exception
 	{
-//		textField.sendKeys(subDealerFundRetailer_OnDownline);
-		textField.sendKeys("*878*878*33*005394*1#");
+		textField.sendKeys(subDealerApproveCustomerAirtimeRequest);
 		call_Btn.click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		
 //		Enter PIN 
-		
-//		pinInPutField.sendKeys(subDealer_PIN);
-		pinInPutField.sendKeys("1234");
-		Thread.sleep(3000);
+		pinInPutField.sendKeys(subDealer_PIN);
 		sendPIN_Btn.click();
+		Thread.sleep(8000);
+
 		
-//		balanceOK_Btn.click();
-//		Thread.sleep(10000);
-//		smsOK_Btn.click();
+		String text = successPrompt.getText();
+		Thread.sleep(6000);
+		
+		ok_Button.click(); 
+		return text; 
 		
 	}
 
-
-	public String getFundTransferMessage()
-	{
-		return fundTransferPopUpMessage.getText();
-	}
 	
 	
 }

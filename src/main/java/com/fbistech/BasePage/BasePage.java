@@ -26,7 +26,7 @@ public class BasePage {
 	
 //	this constructor is accepting AppiumDriver as an object , it takes the driver object and assign it to 
 //	Appium Driver driver object
-	
+	 
 	public BasePage(AppiumDriver driver) 
 	{
 		this.driver = driver;

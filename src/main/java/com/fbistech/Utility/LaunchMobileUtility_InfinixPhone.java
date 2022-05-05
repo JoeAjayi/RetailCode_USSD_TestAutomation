@@ -11,7 +11,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class LaunchMobileUtility {
+public class LaunchMobileUtility_InfinixPhone {
 
 	
 	
@@ -29,11 +29,11 @@ public class LaunchMobileUtility {
 
 			DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-			caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.0");
-			caps.setCapability(MobileCapabilityType.DEVICE_NAME, "LG-M150");
-			caps.setCapability(MobileCapabilityType.UDID, "LGM1509362ee13");
-			caps.setCapability("appPackage", "com.android.contacts");
-			caps.setCapability("appActivity", "com.android.contacts.activities.DialtactsActivity");
+			caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+			caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Infinix X690");
+			caps.setCapability(MobileCapabilityType.UDID, "055802507L002551");
+			caps.setCapability("appPackage", "com.sh.smart.caller");
+			caps.setCapability("appActivity", "com.android.dialer.app.DialtactsActivity");
 
 			URL url = new URL("http://127.0.0.1:4723/wd/hub");
 //		driver = new AndroidDriver<MobileElement> (url, caps); 
@@ -42,9 +42,10 @@ public class LaunchMobileUtility {
 
 //		driver = (AppiumDriv r<MobileElement>) new AppiumDriver<MobileElement> (url, caps); //object of android driver 
 
-			driver.findElementByXPath("//*[@text='Next']").click();
-			driver.findElementByXPath("//*[@text='Next']").click();
-			driver.findElementByXPath("//*[@text='OK']").click();
+			driver.findElementByXPath("//android.widget.ImageButton[@content-desc=\"key pad\"]").click();
+//			driver.findElementByXPath("//*[@text='Next']").click();
+//			
+//			driver.findElementByXPath("//*[@text='OK']").click();
 
 		} catch (MalformedURLException e) {
 			System.out.println("Could not read Mobile setCapability");

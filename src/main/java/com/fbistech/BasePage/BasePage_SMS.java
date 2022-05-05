@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class BasePage3 {
+public class BasePage_SMS {
 	
  	 public static AndroidDriver driver; 
 	
@@ -18,7 +18,7 @@ public class BasePage3 {
 	/*---Reference Variables----*/
 	public Properties prop;
 	 
-	public BasePage3(AndroidDriver driver)
+	public BasePage_SMS(AndroidDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
