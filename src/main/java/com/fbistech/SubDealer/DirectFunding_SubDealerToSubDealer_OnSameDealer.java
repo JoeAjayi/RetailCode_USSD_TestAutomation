@@ -57,8 +57,7 @@ public class DirectFunding_SubDealerToSubDealer_OnSameDealer extends BasePage{
 	
 	
 
-	public String validateSubdealerFundSubdealer_OnSameDealer(String subDealerFundSubdealer_OnSameDealer, 
-			String subDealer_PIN)throws Exception
+	public String validateSubdealerFundSubdealer_OnSameDealer(String subDealerFundSubdealer_OnSameDealer, String subDealer_PIN)throws Exception
 	{
 //		textField.sendKeys("*878*999*33*00695*5#");
 		textField.sendKeys(subDealerFundSubdealer_OnSameDealer);
