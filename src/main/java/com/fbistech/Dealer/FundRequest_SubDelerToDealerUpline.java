@@ -24,16 +24,12 @@ public class FundRequest_SubDelerToDealerUpline extends BasePage{
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement call_Btn;
 	
-	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement requestSuccess_Token;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Button;
 	
-//	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement token_Message;
 	
@@ -46,10 +42,8 @@ public class FundRequest_SubDelerToDealerUpline extends BasePage{
 		textField.sendKeys(fundRequestSubdealerToDealerUpline);
 		call_Btn.click();
 		Thread.sleep(8000);
-		
 		String text = requestSuccess_Token.getText();
 		Thread.sleep(10000);
-		
 		ok_Button.click();
 		return text;
 	}

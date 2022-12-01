@@ -16,28 +16,21 @@ public class CustomerRequestRechargeLater extends BasePage {
 	}
 	
 	
-	
 
-	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
 	private AndroidElement textField;	
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement callButton;
 	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']") 
-//	@AndroidFindBy(xpath = "//*[@resource-id='com.android.phone:id/input_field']")
 	private AndroidElement pinInPutField;
 	
 	@AndroidFindBy(xpath = "//*[@text='SEND']")
 	private AndroidElement sendPinButton;
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement accountBalanceResponse;
-	
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Button;
@@ -45,20 +38,17 @@ public class CustomerRequestRechargeLater extends BasePage {
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Close\"]")
 	private AndroidElement smsCancel_Btn;
 	
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-//	private AndroidElement invalidFund_PopUp;
-//
+	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
+	private AndroidElement invalidFund_PopUp;
 	
 
 	
 	public String validateSubdealerCanView_TransactionHistory() throws Exception
 	{
-		
 //		textField.sendKeys(subDealerToRetailerDownline);
 		textField.sendKeys("*878*999*2*00263*100#");
 		callButton.click();
 		Thread.sleep(8000);
-	
 		String balance = accountBalanceResponse.getText();
 		Thread.sleep(8000);
 		

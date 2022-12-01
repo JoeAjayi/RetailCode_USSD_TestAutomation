@@ -25,24 +25,18 @@ public class CheckBalance extends BasePage {
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Btn;
 	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement accountBalancePopUp;
 	
 	
-	
-//	public void userCheckBalance(String checkBalance) throws InterruptedException
-	public String dealerCheckWalletBalance() throws InterruptedException
+	public String userCheckBalance(String checkBalance) throws InterruptedException
+//	public String dealerCheckWalletBalance() throws InterruptedException
 	{
-//		textField.sendKeys(checkBalance);
-
-		textField.sendKeys("*878*878*8#"); 
+		textField.sendKeys(checkBalance);
+//		textField.sendKeys("*878*878*8#"); 
 		call_Btn.click();
-		
 		Thread.sleep(4000);
 		String balance = accountBalancePopUp.getText();
-		
 		Thread.sleep(5000);
 		ok_Btn.click();
 		

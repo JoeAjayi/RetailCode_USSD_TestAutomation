@@ -16,9 +16,7 @@ public class Transaction_HistoryDealer extends BasePage {
 	}
 	
 	
-	
 
-	
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
 	private AndroidElement textField;	
@@ -28,14 +26,12 @@ public class Transaction_HistoryDealer extends BasePage {
 	
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']") 
-//	@AndroidFindBy(xpath = "//*[@resource-id='com.android.phone:id/input_field']")
 	private AndroidElement pinInPutField;
 	
 	@AndroidFindBy(xpath = "//*[@text='SEND']")
 	private AndroidElement sendPinButton;
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement accountBalancePopUp;
 	
 	
@@ -45,9 +41,10 @@ public class Transaction_HistoryDealer extends BasePage {
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Close\"]")
 	private AndroidElement smsCancel_Btn;
 	
+	
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 //	private AndroidElement invalidFund_PopUp;
-//
+
 	
 
 	
@@ -58,11 +55,8 @@ public class Transaction_HistoryDealer extends BasePage {
 		textField.sendKeys("*878*999*11#");
 		callButton.click();
 		Thread.sleep(8000);
-		
-		
 		String balance = accountBalancePopUp.getText();
 		Thread.sleep(8000);
-		
 		ok_Button.click();
 
 		return balance;

@@ -40,9 +40,6 @@ public class CheckSubDealerWalletBalance_TestCase {
 	
  
 
-	
-	
-
 	@com.fbistech.Utility.JiraPolicy(logTicketReady = true)
 	@Test(priority = 1)
 	public void verifySubDealerCanCheckWalletBalance() throws Exception

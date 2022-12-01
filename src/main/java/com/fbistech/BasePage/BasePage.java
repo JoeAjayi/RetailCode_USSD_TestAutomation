@@ -32,57 +32,9 @@ public class BasePage {
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
-//		LaunchMobileUtility.initializeMobileAndroidDriver();
-
-		
-		
-		
-		
-		/*---Reference Variables----*/
-//		public Properties prop;
-
-////		initialize input 
-//		FileInputStream input = null; 
-//			
-//		try 
-//		{
-////			Now instantiate by calling the constructor of properties  
-//			prop = new Properties();
-//				
-////			Instantiate 
-//			input = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/fbistech/config/config.properties");	
-//			
-////			Load file input stream 
-//			prop.load(input);		
-//		}
-//		catch (FileNotFoundException e) 
-//		{ 
-//			System.out.println("Errors in config.prop block are catch and printed ");
-////			e.printStackTrace();
-//		}
-//		catch (Exception e)
-//		{
-//			e.printStackTrace();
-//		}
-//		finally 
-//		{
-//			if (input != null) 
-//			{
-//				try 
-//				{
-//					input.close();
-//				} 
-//				catch (Exception e)
-//				{
-//					e.printStackTrace();
-//				}
-//			}
-//		}
-
-		
+//		LaunchMobileUtility.initializeMobileAndroidDriver();		
 	
 	}
-	
 
 	
 }

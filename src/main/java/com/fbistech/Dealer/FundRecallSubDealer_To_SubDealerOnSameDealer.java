@@ -36,7 +36,6 @@ public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
 	
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']") 
-//	@AndroidFindBy(xpath = "//*[@resource-id='com.android.phone:id/input_field']")
 	private AndroidElement pinInPutField;
 	
 	@AndroidFindBy(xpath = "//*[@text='SEND']")
@@ -53,9 +52,9 @@ public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Close\"]")
 	private AndroidElement smsCancel_Btn;
 	
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
-//	private AndroidElement invalidFund_PopUp;
-//
+	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
+	private AndroidElement invalidFund_PopUp;
+
 	
 
 	
@@ -77,10 +76,8 @@ public class FundRecallSubDealer_To_SubDealerOnSameDealer extends BasePage {
 		pinInPutField.sendKeys(subDealer_PIN);
 		sendPinButton.click();
 		Thread.sleep(5000);
-		
 		String balance = accountBalanceResponse.getText();
 		Thread.sleep(7000);
-		
 		ok_Button.click();
 
 		return balance;

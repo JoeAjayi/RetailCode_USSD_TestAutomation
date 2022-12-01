@@ -22,30 +22,24 @@ public class AirtimeRequest_CustomerFrom_Subdealer extends BasePage {
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement call_Btn;
 	
-	
-	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement balanceOK_Btn;
 	
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Close\"]")
 	private AndroidElement smsCancel_Btn;
 	
-	
-//	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement requestSent_PopUp;
 	
 
 	public void customerRequestAirtimeFrom_SubDealer() throws Exception
-
 	{
 //		Dial short code  
 		textField.sendKeys("*878*878*00649*1#");
 		call_Btn.click();
 		Thread.sleep(4000);
-		
-//		balanceOK_Btn.click();
-//		Thread.sleep(10000);
+		balanceOK_Btn.click();
+		Thread.sleep(10000);
 	}
 
 	

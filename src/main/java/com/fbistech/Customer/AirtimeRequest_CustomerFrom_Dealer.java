@@ -23,18 +23,15 @@ public class AirtimeRequest_CustomerFrom_Dealer extends BasePage {
 	private AndroidElement call_Btn;
 	
 	
-	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement balanceOK_Btn;
+	
 	
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc=\"Close\"]")
 	private AndroidElement smsCancel_Btn;
 	
 	
-	
-//	@AndroidFindBy(xpath = "//*[@text='Successful NGN1.00 airtime request sent. Your token is 45']")
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement requestSent_PopUp;
 	
 
@@ -45,7 +42,7 @@ public class AirtimeRequest_CustomerFrom_Dealer extends BasePage {
 		textField.sendKeys("*878*878*00*1#");
 		call_Btn.click();
 		Thread.sleep(4000);
-//		balanceOK_Btn.click();		
+		balanceOK_Btn.click();		
 	}
 			
 	public String validateAirtimeRequestSentPopUp()

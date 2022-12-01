@@ -41,7 +41,6 @@ public class Retrieve_Retailcode extends BasePage {
 	private AndroidElement ok_Btn;
 	
 	
-//	public void userCheckBalance(String checkBalance) throws InterruptedException
 
 	public String validateSubdealerRetrieve_Retailcode() throws InterruptedException
 	{
@@ -49,12 +48,9 @@ public class Retrieve_Retailcode extends BasePage {
 		digits_InputField.sendKeys("*878*999*10#");
 		callButon.click();
 		Thread.sleep(6000);
-		
 		String balance = responseField_Popup.getText();
 		Thread.sleep(6000);
-		
 		ok_Btn.click();
-
 		return balance;
 	}	
 

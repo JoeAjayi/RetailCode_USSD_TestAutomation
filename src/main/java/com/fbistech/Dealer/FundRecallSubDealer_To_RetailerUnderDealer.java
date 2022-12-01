@@ -59,8 +59,8 @@ public class FundRecallSubDealer_To_RetailerUnderDealer extends BasePage {
 	
 
 	
-	public String validateSubdealerRecallFund_from_RetailerUnderDealer(String subDealerRecallFundfromR_D, 
-			String subDealerRecallAmountR_D, String subDealer_PIN) throws Exception
+	public String validateSubdealerRecallFund_from_RetailerUnderDealer(String subDealerRecallFundfromR_D, String subDealerRecallAmountR_D, 
+			String subDealer_PIN) throws Exception
 	{
 //		starBtn.click();
 //		textInputField.sendKeys("*878*999*33*1*004080#");

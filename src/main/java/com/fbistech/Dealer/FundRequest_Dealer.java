@@ -22,7 +22,6 @@ public class FundRequest_Dealer extends BasePage {
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement call_Btn;
 	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
 //	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement accountBalancePopUp;
@@ -31,12 +30,11 @@ public class FundRequest_Dealer extends BasePage {
 	private AndroidElement ok_Btn;
 	
 	
-//	public void dealerToFundSubdealerDownline(String subDealerToRetailerDownline) throws Exception
-	public String validateDealerFundRequest() throws Exception
-
+	public String dealerToFundSubdealerDownline(String subDealerToRetailerDownline) throws Exception
+//	public String validateDealerFundRequest() throws Exception
 	{
-//		textField.sendKeys(subDealerToRetailerDownline);
-		textField.sendKeys("*878*878*34*1#");
+		textField.sendKeys(subDealerToRetailerDownline);
+//		textField.sendKeys("*878*878*34*1#");
 		call_Btn.click();
 		Thread.sleep(5000);
 

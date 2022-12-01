@@ -23,18 +23,17 @@ public class VendAirtime_DealerToCustomer extends BasePage {
 	private AndroidElement call_Btn;
 	
 	
-//	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
-//	private AndroidElement pinInPutField;
-//	
-//	@AndroidFindBy(xpath = "//*[@text='SEND']")
-//	private AndroidElement sendPIN_Btn;
+	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
+	private AndroidElement pinInPutField;
+	
+	@AndroidFindBy(xpath = "//*[@text='SEND']")
+	private AndroidElement sendPIN_Btn;
 	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement ok_Btn;
 	
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement accountBalancePopUp;
 	
 	

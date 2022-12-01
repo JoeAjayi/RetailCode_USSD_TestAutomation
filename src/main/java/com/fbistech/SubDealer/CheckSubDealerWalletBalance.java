@@ -55,7 +55,6 @@ public class CheckSubDealerWalletBalance extends BasePage {
 //	public String subdealerCheckWalletBalance() throws InterruptedException
 	public String validateSubdealerCheckBalance(String checkWalletBalance) throws Exception
 	{
-		
 //		starBtn.click(); 
 		textField.sendKeys(checkWalletBalance);
 		callButon.click();

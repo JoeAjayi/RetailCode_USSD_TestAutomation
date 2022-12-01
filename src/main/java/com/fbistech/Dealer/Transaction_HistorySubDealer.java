@@ -17,25 +17,19 @@ public class Transaction_HistorySubDealer extends BasePage {
 	
 	
 	
-
-	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']")
 	private AndroidElement textField;	
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement callButton;
 	
-	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.EditText']") 
-//	@AndroidFindBy(xpath = "//*[@resource-id='com.android.phone:id/input_field']")
 	private AndroidElement pinInPutField;
 	
 	@AndroidFindBy(xpath = "//*[@text='SEND']")
 	private AndroidElement sendPinButton;
 	
 	@AndroidFindBy(xpath = "//*[@class='android.widget.TextView']")
-//	@AndroidFindBy(xpath = "//*[@resource-id='android:id/message']")
 	private AndroidElement accountBalanceResponse;
 	
 	
@@ -57,13 +51,9 @@ public class Transaction_HistorySubDealer extends BasePage {
 		textField.sendKeys(checkTransactionHistory);
 		callButton.click();
 		Thread.sleep(8000);
-		
-		
 		String balance = accountBalanceResponse.getText();
 		Thread.sleep(8000);
-		
 		ok_Button.click();
-
 		return balance;
 	}
 	

@@ -22,8 +22,6 @@ public class AirtimeRequest_CustomerFrom_RetailerUnderSubdealer extends BasePage
 	@AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Call\"]")
 	private AndroidElement call_Btn;
 	
-	
-	
 	@AndroidFindBy(xpath = "//*[@text='OK']")
 	private AndroidElement balanceOK_Btn;
 	
@@ -40,13 +38,9 @@ public class AirtimeRequest_CustomerFrom_RetailerUnderSubdealer extends BasePage
 		textField.sendKeys("*878*878*005394*1#");
 		call_Btn.click();
 		Thread.sleep(4000);
-		
-		
-//		balanceOK_Btn.click();
-//		Thread.sleep(10000);
-//		smsCancel_Btn.click();
-		
-		
+		balanceOK_Btn.click();
+		Thread.sleep(10000);
+		smsCancel_Btn.click();	
 	}
 
 
